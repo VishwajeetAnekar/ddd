@@ -1,0 +1,2 @@
+Feature,Columns in CSV 1,Columns in CSV 2,Status,Result
+Column Count Validation,114,103,Fail,Number of columns are not equal. (114) and (103)

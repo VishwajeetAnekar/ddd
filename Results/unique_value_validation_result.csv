@@ -1,0 +1,11 @@
+Column Name,Status,Repeated Value,Details
+PHARMACY_TRANSACTION_ID,Pass,99893743,ID is unique to File 1
+PHARMACY_TRANSACTION_ID,Pass,34567,ID is unique to File 2
+PHARMACY_TRANSACTION_ID,Pass,78901,ID is unique to File 2
+PHARMACY_TRANSACTION_ID,Pass,12345,ID is unique to File 2
+PHARMACY_TRANSACTION_ID,Pass,45678,ID is unique to File 2
+PHARMACY_TRANSACTION_ID,Pass,90123,ID is unique to File 2
+PHARMACY_TRANSACTION_ID,Pass,23456,ID is unique to File 2
+PHARMACY_TRANSACTION_ID,Pass,56789,ID is unique to File 2
+PHARMACY_TRANSACTION_ID,Pass,89012,ID is unique to File 2
+PHARMACY_TRANSACTION_ID,Pass,2,ID is unique to File 2

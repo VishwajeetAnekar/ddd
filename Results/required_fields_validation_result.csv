@@ -1,0 +1,115 @@
+PHARMACY_TRANSACTION_ID,Column Name,Required Field (Y/N),Value,Status,Details
+99893743,TRANSACTION_DATE,Y,20220916115950,Pass,Required field have value
+99893743,PHARMACY_TRANSACTION_ID,Y,99893743,Pass,Required field have value
+99893743,RESTATEMENT_FLAG,Y,N,Pass,Required field have value
+99893743,TRANSACTION_TYPE,Y,COM,Pass,Required field have value
+99893743,REFERRAL_NUMBER,Y,27670253,Pass,Required field have value
+99893743,REFERRAL_SOURCE,Y,DIRECT,Pass,Required field have value
+99893743,REFERRAL_DATE,Y,20210713000000,Pass,Required field have value
+99893743,BRAND,Y,SOLIRIS,Pass,Required field have value
+99893743,PHARMACY_PATIENT_ID,Y,27670253,Pass,Required field have value
+99893743,PATIENT_STATE,Y,NY,Pass,Required field have value
+99893743,PATIENT_GENDER,Y,M,Pass,Required field have value
+99893743,PATIENT_YEAR_OF_BIRTH,Y,9950,Pass,Required field have value
+99893743,CUSTOMER_STATUS,Y,ACTIVE,Pass,Required field have value
+99893743,CUSTOMER_SUBSTATUS,Y,A01,Pass,Required field have value
+99893743,CUSTOMER_SUBSTATUS_DESCRIPTION,Y,SHIPPED,Pass,Required field have value
+99893743,STATUS_DATE,Y,20220916235950,Pass,Required field have value
+99893743,SPECIALTY_PHARMACY_NPI,Y,1417915653,Pass,Required field have value
+99893743,SPECIALTY_PHARMACY_NCPDP,Y,3974892,Pass,Required field have value
+99893743,SPECIALTY_PHARMACY_NAME,Y,ACCREDO HEALTH GROUP INC.,Pass,Required field have value
+99893743,SPECIALTY_PHARMACY_CODE,Y,ACCREDO_SP,Pass,Required field have value
+99893743,SPECIALTY_PHARMACY_ADDRESS1,Y,3000 ERICSSON DR STE 100,Pass,Required field have value
+99893743,SPECIALTY_PHARMACY_CITY,Y,WARRENDALE,Pass,Required field have value
+99893743,SPECIALTY_PHARMACY_STATE,Y,PA,Pass,Required field have value
+99893743,SPECIALTY_PHARMACY_ZIP,Y,15086,Pass,Required field have value
+99893743,NDC,N,25682000101,Pass,Non-required field
+99893743,MEDICATION,N,SOLIRIS 300MG/30ML VL,Pass,Non-required field
+99893743,PRIMARY_DIAGNOSIS_CODE,N,,Pass,Non-required field
+99893743,SECONDARY_DIAGNOSIS_CODE,N,,Pass,Non-required field
+99893743,ONESOURCE_PATIENT_ID,N,,Pass,Non-required field
+99893743,PATIENT_CONSENT_FLAG,N,N,Pass,Non-required field
+99893743,PATIENT_CONSENT_DATE,N,,Pass,Non-required field
+99893743,PATIENT_CONSENT_EXPIRATION_DATE,N,,Pass,Non-required field
+99893743,PATIENT_ZIP_CODE,N,,Pass,Non-required field
+99893743,PRIOR_AUTH_REQUIRED,N,Y,Pass,Non-required field
+99893743,PRIOR_AUTH_START_DATE,N,20220627,Pass,Non-required field
+99893743,PRIOR_AUTH_EXPIRATION_DATE,N,20230729,Pass,Non-required field
+99893743,PRESCRIBER_NPI,N,1295700177,Pass,Non-required field
+99893743,PRESCRIBER_DEA,N,BP1656478,Pass,Non-required field
+99893743,PRESCRIBER_SLN,N,167203,Pass,Non-required field
+99893743,SP_PRESCRIBER_ID,N,44446,Pass,Non-required field
+99893743,PRESCRIBER_LAST_NAME,N,PEREL,Pass,Non-required field
+99893743,PRESCRIBER_FIRST_NAME,N,ALLAN,Pass,Non-required field
+99893743,PRESCRIBER_MIDDLE_INITIAL,N,B,Pass,Non-required field
+99893743,PRESCRIBER_SUFFIX,N,,Pass,Non-required field
+99893743,PRESCRIBER_ADDRESS1,N,27 31 NEW DORP LANE,Pass,Non-required field
+99893743,PRESCRIBER_ADDRESS2,N,,Pass,Non-required field
+99893743,PRESCRIBER_CITY,N,STATEN ISLAND,Pass,Non-required field
+99893743,PRESCRIBER_STATE,N,NY,Pass,Non-required field
+99893743,PRESCRIBER_ZIP,N,10306,Pass,Non-required field
+99893743,PRESCRIBER_PHONE,N,7186673800,Pass,Non-required field
+99893743,PRESCRIBER_FAX,N,7186673590,Pass,Non-required field
+99893743,PRESCRIBER_SPECIALTY,N,NEUROLOGY,Pass,Non-required field
+99893743,FACILITY_NAME,N,,Pass,Non-required field
+99893743,SPECIALTY_PHARMACY_DEA,N,BA9505554,Pass,Non-required field
+99893743,SPECIALTY_PHARMACY_HIN,N,,Pass,Non-required field
+99893743,SPECIALTY_PHARMACY_ADDRESS2,N,,Pass,Non-required field
+99893743,PRIMARY_PAYER_NAME,N,MEDCO HOME DELIVERY,Pass,Non-required field
+99893743,PRIMARY_PAYER_TYPE,N,PBM,Pass,Non-required field
+99893743,PRIMARY_PAYER_SUBTYPE,N,,Pass,Non-required field
+99893743,PRIMARY_PAYER_BIN,N,610014,Pass,Non-required field
+99893743,PRIMARY_PAYER_PCN,N,,Pass,Non-required field
+99893743,PRIMARY_PAYER_GROUP_ID,N,,Pass,Non-required field
+99893743,PRIMARY_PAYER_IIN,N,,Pass,Non-required field
+99893743,MEDICAL_COVERAGE_FLAG,N,N,Pass,Non-required field
+99893743,PRIMARY_COVERAGE_TYPE,N,PHARMACY,Pass,Non-required field
+99893743,PRIMARY_PLAN_NAME,N,,Pass,Non-required field
+99893743,PRIMARY_PLAN_TYPE,N,PBM,Pass,Non-required field
+99893743,SECONDARY_PAYER_NAME,N,SOLIRIS COPAY ASSIST-PDM,Pass,Non-required field
+99893743,SECONDARY_PAYER_TYPE,N,PBM,Pass,Non-required field
+99893743,SECONDARY_PAYER_SUBTYPE,N,,Pass,Non-required field
+99893743,SECONDARY_PBM_BIN,N,6012,Pass,Non-required field
+99893743,SECONDARY_PBM_PCN,N,,Pass,Non-required field
+99893743,SECONDARY_PBM_GROUP_ID,N,,Pass,Non-required field
+99893743,SECONDARY_PBM_IIN,N,,Pass,Non-required field
+99893743,SECONDARY_COVERAGE_TYPE,N,PHARMACY,Pass,Non-required field
+99893743,SECONDARY_PLAN_NAME,N,,Pass,Non-required field
+99893743,SECONDARY_PLAN_TYPE,N,PBM,Pass,Non-required field
+99893743,PLAN_PAID_AMOUNT,N,,Pass,Non-required field
+99893743,PATIENT_RESPONSIBILITY,N,26,Pass,Non-required field
+99893743,PATIENT_DEDUCTIBLE,N,,Pass,Non-required field
+99893743,PATIENT_COPAY,N,26,Pass,Non-required field
+99893743,PATIENT_COINSURANCE,N,,Pass,Non-required field
+99893743,SECONDARY_PLAN_PAID_AMOUNT,N,,Pass,Non-required field
+99893743,SECONDARY_PATIENT_RESPONSIBILITY,N,0,Pass,Non-required field
+99893743,SECONDARY_PATIENT_DEDUCTIBLE,N,,Pass,Non-required field
+99893743,SECONDARY_PATIENT_COPAY,N,0,Pass,Non-required field
+99893743,SECONDARY_PATIENT_COINSURANCE,N,,Pass,Non-required field
+99893743,OTHER_PAYER_AMOUNT,N,,Pass,Non-required field
+99893743,COPAY_ASSISTANCE_AMOUNT,N,0,Pass,Non-required field
+99893743,RX_NUMBER,N,2420904,Pass,Non-required field
+99893743,RX_NUMBER_OF_REFILLS,N,98,Pass,Non-required field
+99893743,RX_TYPE,N,R,Pass,Non-required field
+99893743,RX_DATE,N,20220711000000,Pass,Non-required field
+99893743,RX_FILL_NUMBER,N,2,Pass,Non-required field
+99893743,NUMBER_OF_REFILLS_REMAINING,N,97,Pass,Non-required field
+99893743,PRIOR_DISPENSES,N,1,Pass,Non-required field
+99893743,QUANTITY_DISPENSED,N,8,Pass,Non-required field
+99893743,UNIT_OF_MEASURE,N,MG,Pass,Non-required field
+99893743,SIG_CODE,N,Dose and Frequency: 1200 mg every 2 weeks Dilute each dose to a final concentration of 5 mg/mL with 0.9% Sodium Chloride Mix 120 mL Soliris with 120 mL Normal Saline for 240 mL total dose. Infuse intravenously over a minimum of 35 minutes.  Infusion Meth,Pass,Non-required field
+99893743,DAYS_SUPPLY,N,28,Pass,Non-required field
+99893743,PRODUCT_LOT_NUMBER,N,1002196,Pass,Non-required field
+99893743,SHIP_DATE,N,20220916000000,Pass,Non-required field
+99893743,SHIP_CARRIER,N,UPS,Pass,Non-required field
+99893743,SHIP_LOCATION,N,,Pass,Non-required field
+99893743,SHIP_ADDRESS1,N,,Pass,Non-required field
+99893743,SHIP_ADDRESS2,N,,Pass,Non-required field
+99893743,SHIP_CITY,N,,Pass,Non-required field
+99893743,SHIP_STATE,N,NY,Pass,Non-required field
+99893743,SHIP_ZIP,N,,Pass,Non-required field
+99893743,SITE_OF_CARE_TYPE,N,,Pass,Non-required field
+99893743,SITE_OF_CARE_ADDRESS1,N,,Pass,Non-required field
+99893743,SITE_OF_CARE_ADDRESS2,N,,Pass,Non-required field
+99893743,SITE_OF_CARE_CITY,N,,Pass,Non-required field
+99893743,SITE_OF_CARE_STATE,N,,Pass,Non-required field
