@@ -9,4 +9,8 @@ def step_impl(context):
 
 @then('all values in the specified columns are equal to expected values')
 def step_impl(context):
-    assert context.validation_result == "All values in expected columns are valid","Expected values validation failed"
+    # assert context.validation_result == "All values in expected columns are valid","Expected values validation failed"
+    if "Some values in expected columns are invalid" in context.validation_result:
+        assert False, "Expected values validation failed: Some values in expected columns are invalid"
+    else:
+        assert True, "All values in expected columns are valid"

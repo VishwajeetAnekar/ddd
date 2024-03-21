@@ -6,10 +6,8 @@ import pandas
 def step_impl(context):
     context.validation_result, context.validation_result_df = field_name_validation(
         context.config_file, context.data_file)
-    context.validation_result.to_csv('Results/field_name_validation_result.csv', index=False)
+    context.validation_result_df.to_csv('Results/field_name_validation_result.csv', index=False)
 
 @then(u'all fields are validated')
 def step_impl(context):
-    assert context.validation_result == "Success: All columns found in CSV file", "Column names do not match"
-
-
+    assert context.validation_result == "All columns found", "Validation failed"

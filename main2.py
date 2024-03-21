@@ -76,11 +76,11 @@ def column_name_match(df1, df2):
                              "Column in CSV 1", "Column in CSV 2", "Status", "Result"])
 
     if result_df['Status'].eq('Pass').all():
-        validation_result = "Success: Column names match"
+        return "Success: Column names match", result_df
     else:
-        validation_result = "Error: Column names do not match"
+        return "Error: Column names do not match", result_df
 
-    return result_df, validation_result
+    
 
 
 def unique_value_validation(df1, df2):
@@ -122,159 +122,109 @@ def unique_value_validation(df1, df2):
     else:
         return result_df, "Success: No repeated values found in either file"
 
-
 def required_fields_validation(config_df, data_df):
     required_columns = config_df[config_df['Requirement']
                                  == 'Y']['Field Name'].tolist()
-    missing_columns = []
+    result_df = []
 
     for txn_id in data_df['PHARMACY_TRANSACTION_ID'].unique():
         txn_df = data_df[data_df['PHARMACY_TRANSACTION_ID'] == txn_id]
         for col in required_columns:
             if col not in txn_df.columns:
-                missing_columns.append({
+                result_df.append({
                     "PHARMACY_TRANSACTION_ID": txn_id,
                     "Column Name": col,
                     "Required Field (Y/N)": "Y",
                     "Value": " ",
                     "Status": "Fail",
-                    "Details": "Column is missing"
+                    "Comments": "Column is missing"
                 })
             else:
                 if txn_df[col].isnull().values.any():
-                    missing_columns.append({
+                    result_df.append({
                         "PHARMACY_TRANSACTION_ID": txn_id,
                         "Column Name": col,
                         "Required Field (Y/N)": "Y",
                         "Value": txn_df[col].iloc[0],
                         "Status": "Fail",
-                        "Details": f"Field has empty values"
+                        "Comments": f"Field has empty values"
                     })
-                else:
-                    missing_columns.append({
-                        "PHARMACY_TRANSACTION_ID": txn_id,
-                        "Column Name": col,
-                        "Required Field (Y/N)": "Y",
-                        "Value": txn_df[col].iloc[0],
-                        "Status": "Pass",
-                        "Details": "Required field have value"
-                    })
+                
 
-        for col in txn_df.columns:
-            if col not in required_columns:
-                missing_columns.append({
-                    "PHARMACY_TRANSACTION_ID": txn_id,
-                    "Column Name": col,
-                    "Required Field (Y/N)": "N",
-                    "Value": txn_df[col].iloc[0],
-                    "Status": "Pass",
-                    "Details": f"Non-required field"
-                })
+    result_df = pd.DataFrame(result_df)
 
-    result_df = pd.DataFrame(missing_columns)
-    result_df = result_df[['PHARMACY_TRANSACTION_ID', 'Column Name',
-                           'Required Field (Y/N)', 'Value', 'Status', 'Details']]
-    error_message = "Error: Required fields are missing or have empty values"
-    for _, row in result_df.iterrows():
-        if row['Status'] == 'Fail':
-            break
+    if not result_df.empty and "Fail" in result_df["Status"].values:
+        return result_df, "Some required fields are missing"
     else:
-        error_message = "Success: All required fields have values"
-    return result_df, error_message
+        return pd.DataFrame(columns=['PHARMACY_TRANSACTION_ID', 'Column Name', 'Required Field (Y/N)', 'Value', 'Status', 'Comments']), "All transactions passed"
 
 
 def expected_values_validation(config_df, data_df):
     result_rows = []
-
     for txn_id in data_df['PHARMACY_TRANSACTION_ID'].unique():
         txn_df = data_df[data_df['PHARMACY_TRANSACTION_ID'] == txn_id]
         for _, config_row in config_df.iterrows():
             col = config_row['Field Name']
-            # expected values for the current column as a string
-            expected_values_str = str(
-                config_row['Expected Value/s (comma separated)']).strip('""')
-            # list containing the individual expected values after splitting and stripping the string.
-            expected_values = [val.strip() for val in expected_values_str.split(
-                ',') if val.strip().lower() != 'nan']
 
+            expected_values_str = str(config_row['Expected Value/s (comma separated)']).strip('""')
+
+            if expected_values_str.lower() in ['nan', '']:
+                continue
+
+            expected_values = [val.strip() for val in expected_values_str.split(',') if val.strip() != '']
             if col not in txn_df.columns:
                 result_rows.append({
                     "PHARMACY_TRANSACTION_ID": txn_id,
                     "Column Name": col,
                     "Expected Values": expected_values_str,
-                    "Status": "Pass",
                     "Value": "",
-                    "Details": f"Column not found"
+                    "Status": "Fail",
+                    "Comments": "Column not found in the CSV file"
                 })
                 continue
 
-            for index, row in txn_df.iterrows():
+            for _, row in txn_df.iterrows():
                 col_value = row[col] if col in row.index else None
-                if pd.isnull(col_value) or (expected_values_str.lower() == 'nan' and col_value == ""):
-                    status = "Pass"
-                    details = "Column value is valid"
-                elif expected_values and col_value not in expected_values:
-                    status = "Fail"
-                    details = "Column value is not valid"
-                else:
-                    status = "Pass"
-                    details = "Column value is valid"
-
-                result_rows.append({
-                    "PHARMACY_TRANSACTION_ID": txn_id,
-                    "Column Name": col,
-                    "Expected Values": expected_values_str,
-                    "Status": status,
-                    "Value": col_value,
-                    "Details": details
-                })
-
+                if pd.isnull(col_value) or col_value == "":
+                    continue
+                    
+                elif col_value is not None and str(col_value) not in expected_values:
+                    result_rows.append({
+                        "PHARMACY_TRANSACTION_ID": txn_id,
+                        "Column Name": col,
+                        "Expected Values": expected_values_str,
+                        "Value": col_value,
+                        "Status": "Fail",
+                        "Comments": "Value does not match expected values"
+                    })
     result_df = pd.DataFrame(result_rows)
-    result_df = result_df[['PHARMACY_TRANSACTION_ID', 'Column Name',
-                           'Expected Values', 'Value', 'Status', 'Details']]
 
-    validation_result = "All values in expected columns are valid" if (
-        result_df['Status'] == 'Pass').all() else result_df.to_string(index=False)
-
-    return result_df, validation_result
+    if not result_df.empty and "Fail" in result_df["Status"].values:
+        return result_df, "Some values in expected columns are invalid"
+    else:
+        return pd.DataFrame(columns=['PHARMACY_TRANSACTION_ID', 'Column Name', 'Expected Values', 'Value', 'Status', 'Comments']), "All transactions passed"
 
 
+    
 def white_space_validation(df):
     result_data = []
-
     for txn_id in df['PHARMACY_TRANSACTION_ID'].unique():
         txn_df = df[df['PHARMACY_TRANSACTION_ID'] == txn_id]
         for col in df.columns:
-            for index, value in txn_df[col].items():
-                # if value = string and contains whitespace
-                # (isinstance(value, int) and re.search(r'^\s|\s$|\s{2,}', str(value))):
-
+            for _, value in txn_df[col].items():
                 if isinstance(value, str) and re.search(r'^\s|\s$|\s{2,}', value):
-                    details = "Whitespace found"
                     result_data.append({
                         "PHARMACY_TRANSACTION_ID": txn_id,
                         "Column Name": col,
                         "Value": value,
                         "Status": "Fail",
-                        "Details": details
+                        "Details": "Whitespace found"
                     })
-                else:
-                    result_data.append({
-                        "PHARMACY_TRANSACTION_ID": txn_id,
-                        "Column Name": col,
-                        "Value": value,
-                        "Status": "Pass",
-                        "Details": "No unneccessary whitespace"
-                    })
-
     result_df = pd.DataFrame(result_data)
-
-    if result_df['Status'].eq('Pass').all():
-        validation_result = "Success: There are no spaces in the column values."
+    if not result_df.empty and "Fail" in result_df["Status"].values:
+        return result_df, "Some values has unnecessary white space"
     else:
-        validation_result = result_df.to_string(index=False)
-
-    return result_df, validation_result
+        return pd.DataFrame(columns=['PHARMACY_TRANSACTION_ID', 'Column Name', 'Value', 'Status', 'Details']), "All transactions passed"
 
 
 def duplicate_keys_validation(df):
@@ -284,9 +234,6 @@ def duplicate_keys_validation(df):
     duplicates_checked = set()
 
     for i, col_name in enumerate(column_names):
-        # This slices the list of column names starting from the next index after the current column (i + 1).
-        # This ensures that we are only checking the columns that come after the current column.
-
         if f"{col_name}.1" in column_names[i + 1:]:
             if col_name not in duplicates_checked:
                 status_list[i] = "Fail"
@@ -341,20 +288,30 @@ def maximum_length_validation(config_file, csv_file):
                 if re.match(r'DATE\(\d+\)', dtype):
                     length = int(re.search(r'\((\d+)\)', dtype).group(1))
                     value = value.replace('.0', '')
-
-                    if len(value) != length or not re.match(r'^\d+$', value):
-                        error_message = f"Invalid date format"
-                        result_data.append(
-                            (txn_id, col, dtype, value, "Fail", error_message))
-                        continue
-
-                    try:
-                        datetime.strptime(value, '%Y%m%d')
-                    except ValueError:
-                        error_message = f"Invalid date format"
-                        result_data.append(
-                            (txn_id, col, dtype, value, "Fail", error_message))
-                        continue
+                
+                    if length == 8:
+                        if len(value) != length or not re.match(r'^\d+$', value):
+                            error_message = f"Invalid date format"
+                            result_data.append(
+                                (txn_id, col, dtype, value, "Fail", error_message))
+                            continue
+                
+                        try:
+                            datetime.strptime(value, '%Y%m%d')
+                        except ValueError:
+                            error_message = f"Invalid date format"
+                            result_data.append(
+                                (txn_id, col, dtype, value, "Fail", error_message))
+                            continue
+                
+                    elif length == 14:
+                        try:
+                            datetime.strptime(value, '%Y%m%d %H:%M:%S')
+                        except ValueError:
+                            error_message = f"Invalid date format"
+                            result_data.append(
+                                (txn_id, col, dtype, value, "Fail", error_message))
+                            continue
 
                 elif re.match(r'DATETIME\(\d+\)', dtype):
                     length = int(
@@ -390,27 +347,6 @@ def maximum_length_validation(config_file, csv_file):
                             (txn_id, col, dtype, value, "Fail", error_message))
                         continue
 
-                elif dtype.startswith('NUMERIC'):
-                    match = re.search(r'\((\d+),(\d+)\)', dtype)
-
-                    if match:
-                        length, decimal_length = map(int, match.groups())
-
-                        if not re.match(r'^\d+(\.\d+)?$', value):
-                            error_message = f"Invalid numeric format"
-                            result_data.append(
-                                (txn_id, col, dtype, value, "Fail", error_message))
-                            continue
-
-                        int_part, dec_part = value.split(
-                            '.') if '.' in value else (value, '')
-
-                        if len(int_part) > length or len(dec_part) > decimal_length:
-                            error_message = f"Exceeded length limit or invalid decimal format"
-                            result_data.append(
-                                (txn_id, col, dtype, value, "Fail", error_message))
-                            continue
-
                 elif dtype.startswith('TIMESTAMP'):
                     try:
                         datetime.strptime(value, '%Y%m%d %H:%M:%S')
@@ -419,9 +355,6 @@ def maximum_length_validation(config_file, csv_file):
                         result_data.append(
                             (txn_id, col, dtype, value, "Fail", error_message))
                         continue
-
-                result_data.append(
-                    (txn_id, col, dtype, value, "Pass", "Valid data"))
 
     validation_result_df = pd.DataFrame(result_data, columns=[
                                         "PHARMACY_TRANSACTION_ID", "Column Name", "Data Type", "Value", "Status", "Details"])
@@ -433,41 +366,41 @@ def maximum_length_validation(config_file, csv_file):
 
 
 def field_name_validation(config_df, csv_df):
+    config_columns = config_df['Field Name'].tolist()
+    
+    csv_columns = csv_df.columns.tolist()
+
     result_data = []
-
-    config_columns = set(config_df['Field Name'].str.lower())
-    csv_columns = set(csv_df.columns.str.lower())
-
+    
     for col in config_columns:
         if col in csv_columns:
             result_data.append({
-                "Field Name": col,
-                "Column name from CSV file": col,
-                "Result": "Pass",
-                "Comments": "Column exists in CSV file"
+                "Config Column": col,
+                "CSV Column": col,
+                "Status": "Pass",
+                "Details": "Column found in both config and CSV files"
             })
         else:
             result_data.append({
-                "Field Name": col,
-                "Column name from CSV file": None,
-                "Result": "Fail",
-                "Comments": "Column does not exist in CSV file"
+                "Config Column": col,
+                "CSV Column": "",
+                "Status": "Pass",
+                "Details": "Column present in config file but not in CSV file"
             })
 
     for col in csv_columns:
         if col not in config_columns:
             result_data.append({
-                "Field Name": None,
-                "Column name from CSV file": col,
-                "Result": "Fail",
-                "Comments": "Column not found in configuration"
+                "Config Column": "",
+                "CSV Column": col,
+                "Status": "Fail",
+                "Details": "Column present in CSV file but not in config file"
             })
 
-    result_df = pd.DataFrame(result_data, columns=["Field Name", "Column name from CSV file", "Result", "Comments"])
+    result_df = pd.DataFrame(result_data,columns = ["Config Column", "CSV Column", "Status", "Details"])
 
-    if result_df['Result'].eq('Pass').all():
-        validation_result = "Success: All columns found in CSV file"
+
+    if result_df['Status'].eq('Pass').all():
+        return "All columns found", result_df
     else:
-        validation_result = "Error: Some columns not found in CSV file"
-
-    return result_df, validation_result
+        return "Some test cases failed. Please check the output for more details", result_df

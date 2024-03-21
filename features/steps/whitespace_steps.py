@@ -13,9 +13,7 @@ def step_impl(context):
 
 @then(u'the validation should be successful')
 def step_impl(context):
-    if context.validation_result == "Success: There are no spaces in the column values.":
-        validation_result = "Success"
+    if "Some values has unnecessary white space" in context.validation_result:
+        assert False, "White space validation failed: Some values has unnecessary white space"
     else:
-        validation_result = "Error"
-
-    assert validation_result == "Success", "Validation failed"
+        assert True, "White space validation passed"

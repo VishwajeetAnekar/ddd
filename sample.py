@@ -1,28 +1,63 @@
-import re
+def expected_values_validation(config_df, data_df):
+    result_rows = []
+    for txn_id in data_df['PHARMACY_TRANSACTION_ID'].unique():
+        txn_df = data_df[data_df['PHARMACY_TRANSACTION_ID'] == txn_id]
+        for _, config_row in config_df.iterrows():
+            col = config_row['Field Name']
+            requirement = config_row['Requirement']
+            if requirement.lower() in ['c', '']:
+                continue
 
-def validate_datetime(value, dtype):
-    if re.match(r'DATETIME\((\d+)\)', dtype):
-        length = int(re.search(r'DATETIME\((\d+)\)', dtype).group(1))
+            expected_values_str = str(config_row['Expected Value/s (comma separated)']).strip('""')
 
-        # Convert value to string, strip, and remove '.0'
-        value_str = str(value).strip().replace('.0', '')
 
-        if len(value_str) != length:
-            error_message = f"Invalid datetime format: Length does not match"
-            return False, value_str, error_message
+            if expected_values_str.lower() in ['nan', '']:
+                continue
 
-        return True, value_str, "Valid datetime format"
+            expected_values = [val.strip() for val in expected_values_str.split(',') if val.strip() != '']
+            if col not in txn_df.columns:
+                result_rows.append({
+                    "PHARMACY_TRANSACTION_ID": txn_id,
+                    "Column Name": col,
+                    "Required Field (Y/N)": requirement,
+                    "Expected Values": expected_values_str,
+                    "Value": "",
+                    "Status": "Fail",
+                    "Comments": "Column not found in the CSV file"
+                })
+                continue
 
-# Test data
-value = 20200000000000
-dtype = 'DATETIME(14)'
+            for _, row in txn_df.iterrows():
+                col_value = row[col] if col in row.index else None
 
-# Perform validation
-result, formatted_value, message = validate_datetime(value, dtype)
+                if requirement.lower() == 'n' and (pd.isna(col_value) or col_value == ""):
+                    continue
 
-# Display results
-print("Value:", value)
-print("Data type:", dtype)
-print("Formatted value:", formatted_value)
-print("Validation result:", result)
-print("Message:", message)
+                if requirement.lower() == 'y' and (pd.isna(col_value) or col_value == ""):
+                    result_rows.append({
+                        "PHARMACY_TRANSACTION_ID": txn_id,
+                        "Column Name": col,
+                        "Required Field (Y/N)": requirement,
+                        "Expected Values": expected_values_str,
+                        "Value": col_value,
+                        "Status": "Fail",
+                        "Comments": "Value is empty, but requirement is 'Y'"
+
+                    })
+                elif col_value is not None and str(col_value) not in expected_values:
+                    result_rows.append({
+                        "PHARMACY_TRANSACTION_ID": txn_id,
+                        "Column Name": col,
+                        "Required Field (Y/N)": requirement,
+                        "Expected Values": expected_values_str,
+                        "Value": col_value,
+                        "Status": "Fail",
+                        "Comments": "Value does not match expected values"
+
+                    })
+    result_df = pd.DataFrame(result_rows)
+
+    if not result_df.empty and "Fail" in result_df["Status"].values:
+        return result_df, "Some values in expected columns are invalid"
+    else:
+        return pd.DataFrame(columns=['PHARMACY_TRANSACTION_ID', 'Column Name', 'Required Field (Y/N)', 'Expected Values', 'Value', 'Status', 'Comments']), "All transactions passed"

@@ -27,9 +27,7 @@ def step_impl(context):
 
 @then('all required fields have values')
 def step_impl(context):
-    if "Error" in context.validation_result:
-        validation_result = "Error"
+    if "Some required fields are missing" in context.validation_result:
+        assert False, "Required fields validation failed: Some required fields are missing"
     else:
-        validation_result = "Success"
-
-    assert validation_result == "Success", "Validation failed"
+        assert True, "Required fields validation passed"

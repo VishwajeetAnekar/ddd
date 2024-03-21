@@ -1,122 +1,160 @@
-Field Name,Column name from CSV file,Result,Comments
-secondary_plan_paid_amount,secondary_plan_paid_amount,Pass,Column exists in CSV file
-pharmacy_patient_id,pharmacy_patient_id,Pass,Column exists in CSV file
-prescriber_city,prescriber_city,Pass,Column exists in CSV file
-primary_payer_group_id,primary_payer_group_id,Pass,Column exists in CSV file
-primary_payer_subtype,primary_payer_subtype,Pass,Column exists in CSV file
-transaction_type,transaction_type,Pass,Column exists in CSV file
-hub_patient_id,,Fail,Column does not exist in CSV file
-prescriber_specialty,prescriber_specialty,Pass,Column exists in CSV file
-specialty_pharmacy_dea,specialty_pharmacy_dea,Pass,Column exists in CSV file
-secondary_payer_type,secondary_payer_type,Pass,Column exists in CSV file
-primary_payer_type,primary_payer_type,Pass,Column exists in CSV file
-specialty_pharmacy_npi,specialty_pharmacy_npi,Pass,Column exists in CSV file
-prescriber_zip,prescriber_zip,Pass,Column exists in CSV file
-specialty_pharmacy_name,specialty_pharmacy_name,Pass,Column exists in CSV file
-restatement_flag,restatement_flag,Pass,Column exists in CSV file
-patient_zip_code,patient_zip_code,Pass,Column exists in CSV file
-prescriber_state,prescriber_state,Pass,Column exists in CSV file
-prescriber_first_name,prescriber_first_name,Pass,Column exists in CSV file
-specialty_pharmacy_code,specialty_pharmacy_code,Pass,Column exists in CSV file
-medication,medication,Pass,Column exists in CSV file
-patient_consent_date,patient_consent_date,Pass,Column exists in CSV file
-secondary_plan_name,secondary_plan_name,Pass,Column exists in CSV file
-referral_source,referral_source,Pass,Column exists in CSV file
-primary_coverage_type,primary_coverage_type,Pass,Column exists in CSV file
-primary_payer_iin,primary_payer_iin,Pass,Column exists in CSV file
-secondary_payer_group_id,,Fail,Column does not exist in CSV file
-rx_number_of_refills,rx_number_of_refills,Pass,Column exists in CSV file
-primary_plan_name,primary_plan_name,Pass,Column exists in CSV file
-prescriber_phone,prescriber_phone,Pass,Column exists in CSV file
-prescriber_dea,prescriber_dea,Pass,Column exists in CSV file
-secondary_patient_responsibility,secondary_patient_responsibility,Pass,Column exists in CSV file
-specialty_pharmacy_city,specialty_pharmacy_city,Pass,Column exists in CSV file
-prescriber_last_name,prescriber_last_name,Pass,Column exists in CSV file
-copay_assistance_amount,copay_assistance_amount,Pass,Column exists in CSV file
-rx_number,rx_number,Pass,Column exists in CSV file
-patient_year_of_birth,patient_year_of_birth,Pass,Column exists in CSV file
-specialty_pharmacy_hin,specialty_pharmacy_hin,Pass,Column exists in CSV file
-prior_auth_expiration_date,prior_auth_expiration_date,Pass,Column exists in CSV file
-secondary_patient_coinsurance,secondary_patient_coinsurance,Pass,Column exists in CSV file
-secondary_patient_deductible,secondary_patient_deductible,Pass,Column exists in CSV file
-patient_copay,patient_copay,Pass,Column exists in CSV file
-medical_coverage_flag,medical_coverage_flag,Pass,Column exists in CSV file
-secondary_patient_copay,secondary_patient_copay,Pass,Column exists in CSV file
-facility_name,facility_name,Pass,Column exists in CSV file
-prior_auth_start_date,prior_auth_start_date,Pass,Column exists in CSV file
-specialty_pharmacy_address2,specialty_pharmacy_address2,Pass,Column exists in CSV file
-secondary_payer_bin,,Fail,Column does not exist in CSV file
-patient_deductible,patient_deductible,Pass,Column exists in CSV file
-primary_payer_pcn,primary_payer_pcn,Pass,Column exists in CSV file
-transaction_date,transaction_date,Pass,Column exists in CSV file
-customer_status,customer_status,Pass,Column exists in CSV file
-patient_consent_expiration_date,patient_consent_expiration_date,Pass,Column exists in CSV file
-referral_number,referral_number,Pass,Column exists in CSV file
-secondary_payer_pcn,,Fail,Column does not exist in CSV file
-pharmacy_transaction_id,pharmacy_transaction_id,Pass,Column exists in CSV file
-specialty_pharmacy_zip,specialty_pharmacy_zip,Pass,Column exists in CSV file
-secondary_payer_iin,,Fail,Column does not exist in CSV file
-referral_date,referral_date,Pass,Column exists in CSV file
-secondary_coverage_type,secondary_coverage_type,Pass,Column exists in CSV file
-primary_payer_bin,primary_payer_bin,Pass,Column exists in CSV file
-plan_paid_amount,plan_paid_amount,Pass,Column exists in CSV file
-patient_state,patient_state,Pass,Column exists in CSV file
-prescriber_npi,prescriber_npi,Pass,Column exists in CSV file
-patient_responsibility,patient_responsibility,Pass,Column exists in CSV file
-prescriber_suffix,prescriber_suffix,Pass,Column exists in CSV file
-other_payer_amount,other_payer_amount,Pass,Column exists in CSV file
-customer_substatus_description,customer_substatus_description,Pass,Column exists in CSV file
-brand,brand,Pass,Column exists in CSV file
-prior_auth_required,prior_auth_required,Pass,Column exists in CSV file
-primary_diagnosis_code,primary_diagnosis_code,Pass,Column exists in CSV file
-patient_gender,patient_gender,Pass,Column exists in CSV file
-primary_payer_name,primary_payer_name,Pass,Column exists in CSV file
-specialty_pharmacy_ncpdp,specialty_pharmacy_ncpdp,Pass,Column exists in CSV file
-secondary_plan_type,secondary_plan_type,Pass,Column exists in CSV file
-patient_coinsurance,patient_coinsurance,Pass,Column exists in CSV file
-name_of_transfer_specialty_pharmacy,,Fail,Column does not exist in CSV file
-prescriber_address2,prescriber_address2,Pass,Column exists in CSV file
-customer_substatus,customer_substatus,Pass,Column exists in CSV file
-secondary_payer_subtype,secondary_payer_subtype,Pass,Column exists in CSV file
-prescriber_address1,prescriber_address1,Pass,Column exists in CSV file
-secondary_payer_name,secondary_payer_name,Pass,Column exists in CSV file
-secondary_diagnosis_code,secondary_diagnosis_code,Pass,Column exists in CSV file
-prescriber_sln,prescriber_sln,Pass,Column exists in CSV file
-sp_prescriber_id,sp_prescriber_id,Pass,Column exists in CSV file
-specialty_pharmacy_state,specialty_pharmacy_state,Pass,Column exists in CSV file
-patient_consent_flag,patient_consent_flag,Pass,Column exists in CSV file
-prescriber_middle_name,,Fail,Column does not exist in CSV file
-ndc,ndc,Pass,Column exists in CSV file
-specialty_pharmacy_address1,specialty_pharmacy_address1,Pass,Column exists in CSV file
-status_date,status_date,Pass,Column exists in CSV file
-prescriber_fax,prescriber_fax,Pass,Column exists in CSV file
-primary_plan_type,primary_plan_type,Pass,Column exists in CSV file
-,ship_carrier,Fail,Column not found in configuration
-,site_of_care_address1,Fail,Column not found in configuration
-,secondary_pbm_iin,Fail,Column not found in configuration
-,quantity_dispensed,Fail,Column not found in configuration
-,ship_address1,Fail,Column not found in configuration
-,ship_date,Fail,Column not found in configuration
-,site_of_care_type,Fail,Column not found in configuration
-,sig_code,Fail,Column not found in configuration
-,unit_of_measure,Fail,Column not found in configuration
-,rx_fill_number,Fail,Column not found in configuration
-,site_of_care_state,Fail,Column not found in configuration
-,site_of_care_city,Fail,Column not found in configuration
-,ship_zip,Fail,Column not found in configuration
-,rx_date,Fail,Column not found in configuration
-,site_of_care_address2,Fail,Column not found in configuration
-,secondary_pbm_pcn,Fail,Column not found in configuration
-,ship_address2,Fail,Column not found in configuration
-,product_lot_number,Fail,Column not found in configuration
-,onesource_patient_id,Fail,Column not found in configuration
-,secondary_pbm_bin,Fail,Column not found in configuration
-,rx_type,Fail,Column not found in configuration
-,prescriber_middle_initial,Fail,Column not found in configuration
-,days_supply,Fail,Column not found in configuration
-,ship_state,Fail,Column not found in configuration
-,prior_dispenses,Fail,Column not found in configuration
-,secondary_pbm_group_id,Fail,Column not found in configuration
-,number_of_refills_remaining,Fail,Column not found in configuration
-,ship_location,Fail,Column not found in configuration
-,ship_city,Fail,Column not found in configuration
+Config Column,CSV Column,Status,Details
+TRANSACTION_DATE,TRANSACTION_DATE,Pass,Column found in both config and CSV files
+SOURCE_CODE,SOURCE_CODE,Pass,Column found in both config and CSV files
+PHARMACY_TRANSACTION_ID,PHARMACY_TRANSACTION_ID,Pass,Column found in both config and CSV files
+RESTATEMENT_FLAG,RESTATEMENT_FLAG,Pass,Column found in both config and CSV files
+TRANSACTION_TYPE,TRANSACTION_TYPE,Pass,Column found in both config and CSV files
+REFERRAL_SOURCE,REFERRAL_SOURCE,Pass,Column found in both config and CSV files
+REFERRAL_NUMBER,REFERRAL_NUMBER,Pass,Column found in both config and CSV files
+REFERRAL_DATE,REFERRAL_DATE,Pass,Column found in both config and CSV files
+BRAND,BRAND,Pass,Column found in both config and CSV files
+NDC,NDC,Pass,Column found in both config and CSV files
+MEDICATION,MEDICATION,Pass,Column found in both config and CSV files
+PRIMARY_DIAGNOSIS_CODE,PRIMARY_DIAGNOSIS_CODE,Pass,Column found in both config and CSV files
+SECONDARY_DIAGNOSIS_CODE,SECONDARY_DIAGNOSIS_CODE,Pass,Column found in both config and CSV files
+LONGITUDINAL_PATIENT_ID,LONGITUDINAL_PATIENT_ID,Pass,Column found in both config and CSV files
+PHARMACY_PATIENT_ID,PHARMACY_PATIENT_ID,Pass,Column found in both config and CSV files
+HUB_PATIENT_ID,HUB_PATIENT_ID,Pass,Column found in both config and CSV files
+PATIENT_CONSENT_FLAG,PATIENT_CONSENT_FLAG,Pass,Column found in both config and CSV files
+PATIENT_CONSENT_DATE,PATIENT_CONSENT_DATE,Pass,Column found in both config and CSV files
+PATIENT_CONSENT_EXPIRATION_DATE,PATIENT_CONSENT_EXPIRATION_DATE,Pass,Column found in both config and CSV files
+PATIENT_STATE,PATIENT_STATE,Pass,Column found in both config and CSV files
+PATIENT_ZIP_CODE,PATIENT_ZIP_CODE,Pass,Column found in both config and CSV files
+PATIENT_GENDER,PATIENT_GENDER,Pass,Column found in both config and CSV files
+PATIENT_YEAR_OF_BIRTH,PATIENT_YEAR_OF_BIRTH,Pass,Column found in both config and CSV files
+CUSTOMER_STATUS,CUSTOMER_STATUS,Pass,Column found in both config and CSV files
+CUSTOMER_SUBSTATUS,CUSTOMER_SUBSTATUS,Pass,Column found in both config and CSV files
+CUSTOMER_SUBSTATUS_DESCRIPTION,CUSTOMER_SUBSTATUS_DESCRIPTION,Pass,Column found in both config and CSV files
+STATUS,STATUS,Pass,Column found in both config and CSV files
+SUBSTATUS,SUBSTATUS,Pass,Column found in both config and CSV files
+SUBSTATUS_DESCRIPTION,SUBSTATUS_DESCRIPTION,Pass,Column found in both config and CSV files
+STATUS_DATE,STATUS_DATE,Pass,Column found in both config and CSV files
+PRIOR_AUTH_REQUIRED,PRIOR_AUTH_REQUIRED,Pass,Column found in both config and CSV files
+PRIOR_AUTH_START_DATE,PRIOR_AUTH_START_DATE,Pass,Column found in both config and CSV files
+PRIOR_AUTH_EXPIRATION_DATE,PRIOR_AUTH_EXPIRATION_DATE,Pass,Column found in both config and CSV files
+PRESCRIBER_NPI,PRESCRIBER_NPI,Pass,Column found in both config and CSV files
+PRESCRIBER_DEA,PRESCRIBER_DEA,Pass,Column found in both config and CSV files
+PRESCRIBER_SLN,PRESCRIBER_SLN,Pass,Column found in both config and CSV files
+SP_PRESCRIBER_ID,SP_PRESCRIBER_ID,Pass,Column found in both config and CSV files
+PRESCRIBER_LAST_NAME,PRESCRIBER_LAST_NAME,Pass,Column found in both config and CSV files
+PRESCRIBER_FIRST_NAME,PRESCRIBER_FIRST_NAME,Pass,Column found in both config and CSV files
+PRESCRIBER_MIDDLE_NAME,PRESCRIBER_MIDDLE_NAME,Pass,Column found in both config and CSV files
+PRESCRIBER_SUFFIX,PRESCRIBER_SUFFIX,Pass,Column found in both config and CSV files
+PRESCRIBER_ADDRESS1,PRESCRIBER_ADDRESS1,Pass,Column found in both config and CSV files
+PRESCRIBER_ADDRESS2,PRESCRIBER_ADDRESS2,Pass,Column found in both config and CSV files
+PRESCRIBER_CITY,PRESCRIBER_CITY,Pass,Column found in both config and CSV files
+PRESCRIBER_STATE,PRESCRIBER_STATE,Pass,Column found in both config and CSV files
+PRESCRIBER_ZIP,PRESCRIBER_ZIP,Pass,Column found in both config and CSV files
+PRESCRIBER_PHONE,PRESCRIBER_PHONE,Pass,Column found in both config and CSV files
+PRESCRIBER_FAX,PRESCRIBER_FAX,Pass,Column found in both config and CSV files
+PRESCRIBER_SPECIALTY,PRESCRIBER_SPECIALTY,Pass,Column found in both config and CSV files
+FACILITY_NAME,FACILITY_NAME,Pass,Column found in both config and CSV files
+SPECIALTY_PHARMACY_NPI,SPECIALTY_PHARMACY_NPI,Pass,Column found in both config and CSV files
+SPECIALTY_PHARMACY_DEA,SPECIALTY_PHARMACY_DEA,Pass,Column found in both config and CSV files
+SPECIALTY_PHARMACY_HIN,SPECIALTY_PHARMACY_HIN,Pass,Column found in both config and CSV files
+SPECIALTY_PHARMACY_NCPDP,SPECIALTY_PHARMACY_NCPDP,Pass,Column found in both config and CSV files
+RAW_SPECIALTY_PHARMACY_NAME,RAW_SPECIALTY_PHARMACY_NAME,Pass,Column found in both config and CSV files
+MASTERED_SPECIALTY_PHARMACY_NAME,MASTERED_SPECIALTY_PHARMACY_NAME,Pass,Column found in both config and CSV files
+SPECIALTY_PHARMACY_ADDRESS1,SPECIALTY_PHARMACY_ADDRESS1,Pass,Column found in both config and CSV files
+SPECIALTY_PHARMACY_ADDRESS2,SPECIALTY_PHARMACY_ADDRESS2,Pass,Column found in both config and CSV files
+SPECIALTY_PHARMACY_CITY,SPECIALTY_PHARMACY_CITY,Pass,Column found in both config and CSV files
+SPECIALTY_PHARMACY_STATE,SPECIALTY_PHARMACY_STATE,Pass,Column found in both config and CSV files
+SPECIALTY_PHARMACY_ZIP,SPECIALTY_PHARMACY_ZIP,Pass,Column found in both config and CSV files
+RAW_PRIMARY_PAYER_NAME,RAW_PRIMARY_PAYER_NAME,Pass,Column found in both config and CSV files
+MASTERED_PRIMARY_PAYER_NAME,MASTERED_PRIMARY_PAYER_NAME,Pass,Column found in both config and CSV files
+MASTERED_PRIMARY_PAYER_ID,MASTERED_PRIMARY_PAYER_ID,Pass,Column found in both config and CSV files
+PRIMARY_PAYER_TYPE,PRIMARY_PAYER_TYPE,Pass,Column found in both config and CSV files
+PRIMARY_PAYER_SUBTYPE,PRIMARY_PAYER_SUBTYPE,Pass,Column found in both config and CSV files
+PRIMARY_PBM_BIN,PRIMARY_PBM_BIN,Pass,Column found in both config and CSV files
+PRIMARY_PBM_PCN,PRIMARY_PBM_PCN,Pass,Column found in both config and CSV files
+PRIMARY_PBM_GROUP_ID,PRIMARY_PBM_GROUP_ID,Pass,Column found in both config and CSV files
+PRIMARY_PBM_IIN,PRIMARY_PBM_IIN,Pass,Column found in both config and CSV files
+MEDICAL_COVERAGE_FLAG,MEDICAL_COVERAGE_FLAG,Pass,Column found in both config and CSV files
+PRIMARY_COVERAGE_TYPE,PRIMARY_COVERAGE_TYPE,Pass,Column found in both config and CSV files
+PRIMARY_PLAN_NAME,PRIMARY_PLAN_NAME,Pass,Column found in both config and CSV files
+PRIMARY_PLAN_TYPE,PRIMARY_PLAN_TYPE,Pass,Column found in both config and CSV files
+RAW_SECONDARY_PAYER_NAME,RAW_SECONDARY_PAYER_NAME,Pass,Column found in both config and CSV files
+MASTERED_SECONDARY_PAYER_NAME,MASTERED_SECONDARY_PAYER_NAME,Pass,Column found in both config and CSV files
+MASTERED_SECONDARY_PAYER_ID,MASTERED_SECONDARY_PAYER_ID,Pass,Column found in both config and CSV files
+SECONDARY_PAYER_TYPE,SECONDARY_PAYER_TYPE,Pass,Column found in both config and CSV files
+SECONDARY_PAYER_SUBTYPE,SECONDARY_PAYER_SUBTYPE,Pass,Column found in both config and CSV files
+SECONDARY_PBM_BIN,SECONDARY_PBM_BIN,Pass,Column found in both config and CSV files
+SECONDARY_PBM_PCN,SECONDARY_PBM_PCN,Pass,Column found in both config and CSV files
+SECONDARY_PBM_GROUP_ID,SECONDARY_PBM_GROUP_ID,Pass,Column found in both config and CSV files
+SECONDARY_PBM_IIN,SECONDARY_PBM_IIN,Pass,Column found in both config and CSV files
+SECONDARY_COVERAGE_TYPE,SECONDARY_COVERAGE_TYPE,Pass,Column found in both config and CSV files
+SECONDARY_PLAN_NAME,SECONDARY_PLAN_NAME,Pass,Column found in both config and CSV files
+SECONDARY_PLAN_TYPE,SECONDARY_PLAN_TYPE,Pass,Column found in both config and CSV files
+PLAN_PAID_AMOUNT,PLAN_PAID_AMOUNT,Pass,Column found in both config and CSV files
+PATIENT_RESPONSIBILITY,PATIENT_RESPONSIBILITY,Pass,Column found in both config and CSV files
+PATIENT_DEDUCTIBLE,PATIENT_DEDUCTIBLE,Pass,Column found in both config and CSV files
+PATIENT_COPAY,PATIENT_COPAY,Pass,Column found in both config and CSV files
+PATIENT_COINSURANCE,PATIENT_COINSURANCE,Pass,Column found in both config and CSV files
+SECONDARY_PLAN_PAID_AMOUNT,SECONDARY_PLAN_PAID_AMOUNT,Pass,Column found in both config and CSV files
+SECONDARY_PATIENT_RESPONSIBILITY,SECONDARY_PATIENT_RESPONSIBILITY,Pass,Column found in both config and CSV files
+SECONDARY_PATIENT_DEDUCTIBLE,SECONDARY_PATIENT_DEDUCTIBLE,Pass,Column found in both config and CSV files
+SECONDARY_PATIENT_COPAY,SECONDARY_PATIENT_COPAY,Pass,Column found in both config and CSV files
+SECONDARY_PATIENT_COINSURANCE,SECONDARY_PATIENT_COINSURANCE,Pass,Column found in both config and CSV files
+OTHER_PAYER_AMOUNT,OTHER_PAYER_AMOUNT,Pass,Column found in both config and CSV files
+COPAY_ASSISTANCE_AMOUNT,COPAY_ASSISTANCE_AMOUNT,Pass,Column found in both config and CSV files
+RX_NUMBER,RX_NUMBER,Pass,Column found in both config and CSV files
+RX_NUMBER_OF_REFILLS,RX_NUMBER_OF_REFILLS,Pass,Column found in both config and CSV files
+NAME_OF_TRANSFER_SPECIALTY_PHARMACY,NAME_OF_TRANSFER_SPECIALTY_PHARMACY,Pass,Column found in both config and CSV files
+SECONDARY_PAT_COINSURANCE,,Pass,Column present in config file but not in CSV file
+SECONDARY_PAT_DEDUCTIBLE,,Pass,Column present in config file but not in CSV file
+SECONDARY_PATIENT_RESPONSIBILITY,SECONDARY_PATIENT_RESPONSIBILITY,Pass,Column found in both config and CSV files
+COPAY_ASSIST_AMOUNT,,Pass,Column present in config file but not in CSV file
+OTHER_PAYER_AMOUNT,OTHER_PAYER_AMOUNT,Pass,Column found in both config and CSV files
+TRANSFER_PHARMACY_NAME,,Pass,Column present in config file but not in CSV file
+PATIENT_WEIGHT,,Pass,Column present in config file but not in CSV file
+PATIENT_TRANSFUSIONS,,Pass,Column present in config file but not in CSV file
+PATIENT_HEMOGLOBIN,,Pass,Column present in config file but not in CSV file
+PATIENT_BILIRUBIN,,Pass,Column present in config file but not in CSV file
+PATIENT_BREAKTHROUGH_HEMOLYSIS_HISTORY,,Pass,Column present in config file but not in CSV file
+PATIENT_LDH_LEVEL,,Pass,Column present in config file but not in CSV file
+PNH_DIAGNOSIS_DATE,,Pass,Column present in config file but not in CSV file
+PATIENT_RETIC_COUNT,,Pass,Column present in config file but not in CSV file
+PATIENT_THROMBOSIS_HISTORY,,Pass,Column present in config file but not in CSV file
+PRESCRIBED_DOSING_FREQUENCY,,Pass,Column present in config file but not in CSV file
+PRESCRIBED_DOSE,,Pass,Column present in config file but not in CSV file
+SIGNATURA,,Pass,Column present in config file but not in CSV file
+PRIOR_THERAPY,,Pass,Column present in config file but not in CSV file
+PRIOR_THERAPY_DOSE,,Pass,Column present in config file but not in CSV file
+PRIOR_THERAPY_FREQUENCY,,Pass,Column present in config file but not in CSV file
+PRIOR_THERAPY_START,,Pass,Column present in config file but not in CSV file
+PATIENT_VIALS_ON_HAND,,Pass,Column present in config file but not in CSV file
+YEARS_ON_COMPLEMENT,,Pass,Column present in config file but not in CSV file
+INTAKE_ID,,Pass,Column present in config file but not in CSV file
+INTAKE_START_DATE,,Pass,Column present in config file but not in CSV file
+PA_EXPIRATION,,Pass,Column present in config file but not in CSV file
+PRESCRIBER_REMS_ID,,Pass,Column present in config file but not in CSV file
+REMS_AUTHORIZATION_CODE,,Pass,Column present in config file but not in CSV file
+STREPTOCOCCUS_PNEUMONIAE_MOST_RECENTLY_RECEIVED_SEROTYPE,,Pass,Column present in config file but not in CSV file
+STREPTOCOCCUS_PNEUMONIAE_DOSE_NUMBER,,Pass,Column present in config file but not in CSV file
+STREPTOCOCCUS_PNEUMONIAE_MOST_RECENT_DOSE_DATE,,Pass,Column present in config file but not in CSV file
+STREPTOCOCCUS_PNEUMONIA_DOSE_PENDING,,Pass,Column present in config file but not in CSV file
+STREPTOCOCCUS_PNEUMONIAE_MISSING_INFORMATION_REASON,,Pass,Column present in config file but not in CSV file
+NEISSERIA_MENINGITIDIS_ACWY_SEROTYPE,,Pass,Column present in config file but not in CSV file
+NEISSERIA_MENINGITIDIS_ACWY_DOSE_NUMBER,,Pass,Column present in config file but not in CSV file
+NEISSERIA_MENINGITIDIS_ACWY_MOST_RECENT_DOSE_DATE,,Pass,Column present in config file but not in CSV file
+NEISSERIA_MENINGITIDIS_ACWY_BOOSTER,,Pass,Column present in config file but not in CSV file
+NEISSERIA_MENINGITIDIS_ACWY_DOSE_PENDING,,Pass,Column present in config file but not in CSV file
+NEISSERIA_MENINGITIDIS_ACWY_MISSING_INFORMATION_REASON,,Pass,Column present in config file but not in CSV file
+NEISSERIA_MENINGITIDIS_B_SEROTYPE,,Pass,Column present in config file but not in CSV file
+NEISSERIA_MENINGITIDIS_B_DOSE_NUMBER,,Pass,Column present in config file but not in CSV file
+NEISSERIA_MENINGITIDIS_B_MOST_RECENT_DOSE_DATE,,Pass,Column present in config file but not in CSV file
+NEISSERIA_MENINGITIDIS_B_BOOSTER_DOSE,,Pass,Column present in config file but not in CSV file
+NEISSERIA_MENINGITIDIS_B_DOSE_PENDING,,Pass,Column present in config file but not in CSV file
+NEISSERIA_MENINGITIDIS_B_MISSING_INFORMATION_REASON,,Pass,Column present in config file but not in CSV file
+HAEMOPHILUS_INFLUENZA_TYPE_B_DOSE_NUMBER,,Pass,Column present in config file but not in CSV file
+HAEMOPHILUS_INFLUENZA_MOST_RECENT_DOSE_DATE,,Pass,Column present in config file but not in CSV file
+HAEMOPHILUS_INFLUENZA_DOSE_PENDING,,Pass,Column present in config file but not in CSV file
+HAEMOPHILUS_INFLUENZA_MISSING_INFORMATION_REASON,,Pass,Column present in config file but not in CSV file
+VACCINATED_ACIP,,Pass,Column present in config file but not in CSV file
+PATIENT_RECEIVED_PROPHYLAXIS,,Pass,Column present in config file but not in CSV file
+PROPHYLAXIS_DATE,,Pass,Column present in config file but not in CSV file
+PRESCRIBER_ATTESTATION,,Pass,Column present in config file but not in CSV file
+FLEX_FIELD_2,,Pass,Column present in config file but not in CSV file
+FLEX_FIELD_3,,Pass,Column present in config file but not in CSV file
+FLEX_FIELD_4,,Pass,Column present in config file but not in CSV file
+FLEX_FIELD_5,,Pass,Column present in config file but not in CSV file
