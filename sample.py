@@ -1,46 +1,63 @@
-import pandas as pd
+def expected_values_validation(config_df, data_df):
+    result_rows = []
+    for txn_id in data_df['PHARMACY_TRANSACTION_ID'].unique():
+        txn_df = data_df[data_df['PHARMACY_TRANSACTION_ID'] == txn_id]
+        for _, config_row in config_df.iterrows():
+            col = config_row['Field Name']
+            requirement = config_row['Requirement']
+            if requirement.lower() in ['c', '']:
+                continue
 
-def required_field_validation(config_df, csv_df):
-    validation_results = []
-    for index, row in config_df.iterrows():
-        field_name = row['Field Name']
-        is_required = row['Requirement'] == 'Y'
-        if field_name in csv_df.columns:
-            if is_required:
-                for idx, value in csv_df[field_name].items():
-                    if pd.isna(value):
-                        validation_results.append({
-                            'PHARMACY_TRANSACTION_ID': csv_df.loc[idx, 'PHARMACY_TRANSACTION_ID'],
-                            'Column Name': field_name,
-                            'Required Field (Y/N)': 'Y',
-                            'Value': 'Missing',
-                            'Status': 'Fail',
-                            'Details': f"{field_name} is a required field and is missing value."
-                        })
-                    else:
-                        validation_results.append({
-                            'PHARMACY_TRANSACTION_ID': csv_df.loc[idx, 'PHARMACY_TRANSACTION_ID'],
-                            'Column Name': field_name,
-                            'Required Field (Y/N)': 'Y',
-                            'Value': value,
-                            'Status': 'Pass',
-                            'Details': f"{field_name} is a required field and has a value."
-                        })
-        else:
-            validation_results.append({
-                'PHARMACY_TRANSACTION_ID': '',
-                'Column Name': field_name,
-                'Required Field (Y/N)': 'Y',
-                'Value': 'NA',
-                'Status': 'Fail',
-                'Details': f"{field_name} is a required field but does not exist in the CSV file."
-            })
-    result_df = pd.DataFrame(validation_results)
-    result_df = result_df[['PHARMACY_TRANSACTION_ID', 'Column Name',
-                       'Required Field (Y/N)', 'Value', 'Status', 'Details']]
-    return result_df
+            expected_values_str = str(config_row['Expected Value/s (comma separated)']).strip('""')
 
-config_file_path = pd.read_csv('CSV files\cccc.csv')
-csv_file_path = pd.read_csv('CSV files\demo.csv')
-result_df = required_field_validation(config_file_path, csv_file_path)
-result_df.to_csv('testing.csv')
+
+            if expected_values_str.lower() in ['nan', '']:
+                continue
+
+            expected_values = [val.strip() for val in expected_values_str.split(',') if val.strip() != '']
+            if col not in txn_df.columns:
+                result_rows.append({
+                    "PHARMACY_TRANSACTION_ID": txn_id,
+                    "Column Name": col,
+                    "Required Field (Y/N)": requirement,
+                    "Expected Values": expected_values_str,
+                    "Value": "",
+                    "Status": "Fail",
+                    "Comments": "Column not found in the CSV file"
+                })
+                continue
+
+            for _, row in txn_df.iterrows():
+                col_value = row[col] if col in row.index else None
+
+                if requirement.lower() == 'n' and (pd.isna(col_value) or col_value == ""):
+                    continue
+
+                if requirement.lower() == 'y' and (pd.isna(col_value) or col_value == ""):
+                    result_rows.append({
+                        "PHARMACY_TRANSACTION_ID": txn_id,
+                        "Column Name": col,
+                        "Required Field (Y/N)": requirement,
+                        "Expected Values": expected_values_str,
+                        "Value": col_value,
+                        "Status": "Fail",
+                        "Comments": "Value is empty, but requirement is 'Y'"
+
+                    })
+                elif col_value is not None and str(col_value) not in expected_values:
+                    result_rows.append({
+                        "PHARMACY_TRANSACTION_ID": txn_id,
+                        "Column Name": col,
+                        "Required Field (Y/N)": requirement,
+                        "Expected Values": expected_values_str,
+                        "Value": col_value,
+                        "Status": "Fail",
+                        "Comments": "Value does not match expected values"
+
+                    })
+    result_df = pd.DataFrame(result_rows)
+
+    if not result_df.empty and "Fail" in result_df["Status"].values:
+        return result_df, "Some values in expected columns are invalid"
+    else:
+        return pd.DataFrame(columns=['PHARMACY_TRANSACTION_ID', 'Column Name', 'Required Field (Y/N)', 'Expected Values', 'Value', 'Status', 'Comments']), "All transactions passed"
