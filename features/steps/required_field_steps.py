@@ -21,7 +21,7 @@ def step_impl(context):
         context.config_file, context.data_file)
 
     context.validation_result_df.to_csv(
-        'Results/required_fields_validation_result.csv', index=False)
+        'Results/Done/required_fields_validation_result.csv', index=False)
 
 
 

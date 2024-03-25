@@ -1,0 +1,189 @@
+PHARMACY_TRANSACTION_ID,Column Name,Required Field (Y/N),Value,Status,Details
+1,TRANSACTION_DATE,Y,20220223 00:00:00,Pass,TRANSACTION_DATE is a required field and has a value.
+2,TRANSACTION_DATE,Y,20230718 00:00:00,Pass,TRANSACTION_DATE is a required field and has a value.
+3,TRANSACTION_DATE,Y,20220510 00:00:00,Pass,TRANSACTION_DATE is a required field and has a value.
+4,TRANSACTION_DATE,Y,20211210 00:00:00,Pass,TRANSACTION_DATE is a required field and has a value.
+5,TRANSACTION_DATE,Y,20220321 00:00:00,Pass,TRANSACTION_DATE is a required field and has a value.
+6,TRANSACTION_DATE,Y,20220805 00:00:00,Pass,TRANSACTION_DATE is a required field and has a value.
+7,TRANSACTION_DATE,Y,20220114 00:00:00,Pass,TRANSACTION_DATE is a required field and has a value.
+8,TRANSACTION_DATE,Y,20220225 00:00:00,Pass,TRANSACTION_DATE is a required field and has a value.
+1,PHARMACY_TRANSACTION_ID,Y,1,Pass,PHARMACY_TRANSACTION_ID is a required field and has a value.
+2,PHARMACY_TRANSACTION_ID,Y,2,Pass,PHARMACY_TRANSACTION_ID is a required field and has a value.
+3,PHARMACY_TRANSACTION_ID,Y,3,Pass,PHARMACY_TRANSACTION_ID is a required field and has a value.
+4,PHARMACY_TRANSACTION_ID,Y,4,Pass,PHARMACY_TRANSACTION_ID is a required field and has a value.
+5,PHARMACY_TRANSACTION_ID,Y,5,Pass,PHARMACY_TRANSACTION_ID is a required field and has a value.
+6,PHARMACY_TRANSACTION_ID,Y,6,Pass,PHARMACY_TRANSACTION_ID is a required field and has a value.
+7,PHARMACY_TRANSACTION_ID,Y,7,Pass,PHARMACY_TRANSACTION_ID is a required field and has a value.
+8,PHARMACY_TRANSACTION_ID,Y,8,Pass,PHARMACY_TRANSACTION_ID is a required field and has a value.
+1,RESTATEMENT_FLAG,Y,Missing,Fail,RESTATEMENT_FLAG is a required field and is missing value.
+2,RESTATEMENT_FLAG,Y,Missing,Fail,RESTATEMENT_FLAG is a required field and is missing value.
+3,RESTATEMENT_FLAG,Y,N,Pass,RESTATEMENT_FLAG is a required field and has a value.
+4,RESTATEMENT_FLAG,Y,N,Pass,RESTATEMENT_FLAG is a required field and has a value.
+5,RESTATEMENT_FLAG,Y,N,Pass,RESTATEMENT_FLAG is a required field and has a value.
+6,RESTATEMENT_FLAG,Y,N,Pass,RESTATEMENT_FLAG is a required field and has a value.
+7,RESTATEMENT_FLAG,Y,N,Pass,RESTATEMENT_FLAG is a required field and has a value.
+8,RESTATEMENT_FLAG,Y,N,Pass,RESTATEMENT_FLAG is a required field and has a value.
+1,TRANSACTION_TYPE,Y,Missing,Fail,TRANSACTION_TYPE is a required field and is missing value.
+2,TRANSACTION_TYPE,Y,Missing,Fail,TRANSACTION_TYPE is a required field and is missing value.
+3,TRANSACTION_TYPE,Y,COM,Pass,TRANSACTION_TYPE is a required field and has a value.
+4,TRANSACTION_TYPE,Y,COM,Pass,TRANSACTION_TYPE is a required field and has a value.
+5,TRANSACTION_TYPE,Y,COM,Pass,TRANSACTION_TYPE is a required field and has a value.
+6,TRANSACTION_TYPE,Y,COM,Pass,TRANSACTION_TYPE is a required field and has a value.
+7,TRANSACTION_TYPE,Y,COM,Pass,TRANSACTION_TYPE is a required field and has a value.
+8,TRANSACTION_TYPE,Y,COM,Pass,TRANSACTION_TYPE is a required field and has a value.
+1,REFERRAL_NUMBER,Y,Missing,Fail,REFERRAL_NUMBER is a required field and is missing value.
+2,REFERRAL_NUMBER,Y,Missing,Fail,REFERRAL_NUMBER is a required field and is missing value.
+3,REFERRAL_NUMBER,Y,99900000000000.0,Pass,REFERRAL_NUMBER is a required field and has a value.
+4,REFERRAL_NUMBER,Y,Missing,Fail,REFERRAL_NUMBER is a required field and is missing value.
+5,REFERRAL_NUMBER,Y,Missing,Fail,REFERRAL_NUMBER is a required field and is missing value.
+6,REFERRAL_NUMBER,Y,Missing,Fail,REFERRAL_NUMBER is a required field and is missing value.
+7,REFERRAL_NUMBER,Y,Missing,Fail,REFERRAL_NUMBER is a required field and is missing value.
+8,REFERRAL_NUMBER,Y,Missing,Fail,REFERRAL_NUMBER is a required field and is missing value.
+1,REFERRAL_SOURCE,Y,Missing,Fail,REFERRAL_SOURCE is a required field and is missing value.
+2,REFERRAL_SOURCE,Y,Missing,Fail,REFERRAL_SOURCE is a required field and is missing value.
+3,REFERRAL_SOURCE,Y,DIRECT,Pass,REFERRAL_SOURCE is a required field and has a value.
+4,REFERRAL_SOURCE,Y,DIRECT,Pass,REFERRAL_SOURCE is a required field and has a value.
+5,REFERRAL_SOURCE,Y,DIRECT,Pass,REFERRAL_SOURCE is a required field and has a value.
+6,REFERRAL_SOURCE,Y,DIRECT,Pass,REFERRAL_SOURCE is a required field and has a value.
+7,REFERRAL_SOURCE,Y,DIRECT,Pass,REFERRAL_SOURCE is a required field and has a value.
+8,REFERRAL_SOURCE,Y,DIRECT,Pass,REFERRAL_SOURCE is a required field and has a value.
+1,REFERRAL_DATE,Y,Missing,Fail,REFERRAL_DATE is a required field and is missing value.
+2,REFERRAL_DATE,Y,Missing,Fail,REFERRAL_DATE is a required field and is missing value.
+3,REFERRAL_DATE,Y,20220505 00:00:00,Pass,REFERRAL_DATE is a required field and has a value.
+4,REFERRAL_DATE,Y,20211210 00:00:00,Pass,REFERRAL_DATE is a required field and has a value.
+5,REFERRAL_DATE,Y,20220321 00:00:00,Pass,REFERRAL_DATE is a required field and has a value.
+6,REFERRAL_DATE,Y,20220805 00:00:00,Pass,REFERRAL_DATE is a required field and has a value.
+7,REFERRAL_DATE,Y,20211222 00:00:00,Pass,REFERRAL_DATE is a required field and has a value.
+8,REFERRAL_DATE,Y,20220224 00:00:00,Pass,REFERRAL_DATE is a required field and has a value.
+1,BRAND,Y,ULTOMIRIS,Pass,BRAND is a required field and has a value.
+2,BRAND,Y,ULTOMIRIS,Pass,BRAND is a required field and has a value.
+3,BRAND,Y,SOLIRIS,Pass,BRAND is a required field and has a value.
+4,BRAND,Y,SOLIRIS,Pass,BRAND is a required field and has a value.
+5,BRAND,Y,SOLIRIS,Pass,BRAND is a required field and has a value.
+6,BRAND,Y,SOLIRIS,Pass,BRAND is a required field and has a value.
+7,BRAND,Y,SOLIRIS,Pass,BRAND is a required field and has a value.
+8,BRAND,Y,SOLIRIS,Pass,BRAND is a required field and has a value.
+1,PHARMACY_PATIENT_ID,Y,P-00100399,Pass,PHARMACY_PATIENT_ID is a required field and has a value.
+2,PHARMACY_PATIENT_ID,Y,P-00404754,Pass,PHARMACY_PATIENT_ID is a required field and has a value.
+3,PHARMACY_PATIENT_ID,Y,7999304316,Pass,PHARMACY_PATIENT_ID is a required field and has a value.
+4,PHARMACY_PATIENT_ID,Y,7999782114,Pass,PHARMACY_PATIENT_ID is a required field and has a value.
+5,PHARMACY_PATIENT_ID,Y,9931459463,Pass,PHARMACY_PATIENT_ID is a required field and has a value.
+6,PHARMACY_PATIENT_ID,Y,7999534254,Pass,PHARMACY_PATIENT_ID is a required field and has a value.
+7,PHARMACY_PATIENT_ID,Y,9936139746,Pass,PHARMACY_PATIENT_ID is a required field and has a value.
+8,PHARMACY_PATIENT_ID,Y,9931644794,Pass,PHARMACY_PATIENT_ID is a required field and has a value.
+1,PATIENT_STATE,Y,Missing,Fail,PATIENT_STATE is a required field and is missing value.
+2,PATIENT_STATE,Y,Missing,Fail,PATIENT_STATE is a required field and is missing value.
+3,PATIENT_STATE,Y,TX,Pass,PATIENT_STATE is a required field and has a value.
+4,PATIENT_STATE,Y,IL,Pass,PATIENT_STATE is a required field and has a value.
+5,PATIENT_STATE,Y,NV,Pass,PATIENT_STATE is a required field and has a value.
+6,PATIENT_STATE,Y,OR,Pass,PATIENT_STATE is a required field and has a value.
+7,PATIENT_STATE,Y,NV,Pass,PATIENT_STATE is a required field and has a value.
+8,PATIENT_STATE,Y,DC,Pass,PATIENT_STATE is a required field and has a value.
+1,PATIENT_GENDER,Y,Missing,Fail,PATIENT_GENDER is a required field and is missing value.
+2,PATIENT_GENDER,Y,Missing,Fail,PATIENT_GENDER is a required field and is missing value.
+3,PATIENT_GENDER,Y,F,Pass,PATIENT_GENDER is a required field and has a value.
+4,PATIENT_GENDER,Y,F,Pass,PATIENT_GENDER is a required field and has a value.
+5,PATIENT_GENDER,Y,F,Pass,PATIENT_GENDER is a required field and has a value.
+6,PATIENT_GENDER,Y,M,Pass,PATIENT_GENDER is a required field and has a value.
+7,PATIENT_GENDER,Y,F,Pass,PATIENT_GENDER is a required field and has a value.
+8,PATIENT_GENDER,Y,M,Pass,PATIENT_GENDER is a required field and has a value.
+1,PATIENT_YEAR_OF_BIRTH,Y,Missing,Fail,PATIENT_YEAR_OF_BIRTH is a required field and is missing value.
+2,PATIENT_YEAR_OF_BIRTH,Y,Missing,Fail,PATIENT_YEAR_OF_BIRTH is a required field and is missing value.
+3,PATIENT_YEAR_OF_BIRTH,Y,1996.0,Pass,PATIENT_YEAR_OF_BIRTH is a required field and has a value.
+4,PATIENT_YEAR_OF_BIRTH,Y,1956.0,Pass,PATIENT_YEAR_OF_BIRTH is a required field and has a value.
+5,PATIENT_YEAR_OF_BIRTH,Y,1970.0,Pass,PATIENT_YEAR_OF_BIRTH is a required field and has a value.
+6,PATIENT_YEAR_OF_BIRTH,Y,1995.0,Pass,PATIENT_YEAR_OF_BIRTH is a required field and has a value.
+7,PATIENT_YEAR_OF_BIRTH,Y,1973.0,Pass,PATIENT_YEAR_OF_BIRTH is a required field and has a value.
+8,PATIENT_YEAR_OF_BIRTH,Y,1963.0,Pass,PATIENT_YEAR_OF_BIRTH is a required field and has a value.
+1,CUSTOMER_STATUS,Y,TREATMENT COORDINATION,Pass,CUSTOMER_STATUS is a required field and has a value.
+2,CUSTOMER_STATUS,Y,TREATMENT COORDINATION,Pass,CUSTOMER_STATUS is a required field and has a value.
+3,CUSTOMER_STATUS,Y,ACTIVE,Pass,CUSTOMER_STATUS is a required field and has a value.
+4,CUSTOMER_STATUS,Y,PENDING,Pass,CUSTOMER_STATUS is a required field and has a value.
+5,CUSTOMER_STATUS,Y,PENDING,Pass,CUSTOMER_STATUS is a required field and has a value.
+6,CUSTOMER_STATUS,Y,PENDING,Pass,CUSTOMER_STATUS is a required field and has a value.
+7,CUSTOMER_STATUS,Y,CANCELLED,Pass,CUSTOMER_STATUS is a required field and has a value.
+8,CUSTOMER_STATUS,Y,CANCELLED,Pass,CUSTOMER_STATUS is a required field and has a value.
+1,CUSTOMER_SUBSTATUS,Y,Missing,Fail,CUSTOMER_SUBSTATUS is a required field and is missing value.
+2,CUSTOMER_SUBSTATUS,Y,Missing,Fail,CUSTOMER_SUBSTATUS is a required field and is missing value.
+3,CUSTOMER_SUBSTATUS,Y,A1,Pass,CUSTOMER_SUBSTATUS is a required field and has a value.
+4,CUSTOMER_SUBSTATUS,Y,P1,Pass,CUSTOMER_SUBSTATUS is a required field and has a value.
+5,CUSTOMER_SUBSTATUS,Y,P1,Pass,CUSTOMER_SUBSTATUS is a required field and has a value.
+6,CUSTOMER_SUBSTATUS,Y,P1,Pass,CUSTOMER_SUBSTATUS is a required field and has a value.
+7,CUSTOMER_SUBSTATUS,Y,C7,Pass,CUSTOMER_SUBSTATUS is a required field and has a value.
+8,CUSTOMER_SUBSTATUS,Y,C19,Pass,CUSTOMER_SUBSTATUS is a required field and has a value.
+1,CUSTOMER_SUBSTATUS_DESCRIPTION,Y,TREATMENT COORDINATION,Pass,CUSTOMER_SUBSTATUS_DESCRIPTION is a required field and has a value.
+2,CUSTOMER_SUBSTATUS_DESCRIPTION,Y,TREATMENT COORDINATION,Pass,CUSTOMER_SUBSTATUS_DESCRIPTION is a required field and has a value.
+3,CUSTOMER_SUBSTATUS_DESCRIPTION,Y,ACTIVE,Pass,CUSTOMER_SUBSTATUS_DESCRIPTION is a required field and has a value.
+4,CUSTOMER_SUBSTATUS_DESCRIPTION,Y,PENDING,Pass,CUSTOMER_SUBSTATUS_DESCRIPTION is a required field and has a value.
+5,CUSTOMER_SUBSTATUS_DESCRIPTION,Y,PENDING,Pass,CUSTOMER_SUBSTATUS_DESCRIPTION is a required field and has a value.
+6,CUSTOMER_SUBSTATUS_DESCRIPTION,Y,PENDING,Pass,CUSTOMER_SUBSTATUS_DESCRIPTION is a required field and has a value.
+7,CUSTOMER_SUBSTATUS_DESCRIPTION,Y,CANCELLED,Pass,CUSTOMER_SUBSTATUS_DESCRIPTION is a required field and has a value.
+8,CUSTOMER_SUBSTATUS_DESCRIPTION,Y,CANCELLED,Pass,CUSTOMER_SUBSTATUS_DESCRIPTION is a required field and has a value.
+1,STATUS_DATE,Y,20220223 00:00:00,Pass,STATUS_DATE is a required field and has a value.
+2,STATUS_DATE,Y,20230718 00:00:00,Pass,STATUS_DATE is a required field and has a value.
+3,STATUS_DATE,Y,20220510 00:00:00,Pass,STATUS_DATE is a required field and has a value.
+4,STATUS_DATE,Y,20211210 00:00:00,Pass,STATUS_DATE is a required field and has a value.
+5,STATUS_DATE,Y,20220321 00:00:00,Pass,STATUS_DATE is a required field and has a value.
+6,STATUS_DATE,Y,20220805 00:00:00,Pass,STATUS_DATE is a required field and has a value.
+7,STATUS_DATE,Y,20220114 00:00:00,Pass,STATUS_DATE is a required field and has a value.
+8,STATUS_DATE,Y,20220225 00:00:00,Pass,STATUS_DATE is a required field and has a value.
+1,SPECIALTY_PHARMACY_NPI,Y,Missing,Fail,SPECIALTY_PHARMACY_NPI is a required field and is missing value.
+2,SPECIALTY_PHARMACY_NPI,Y,1306182548.0,Pass,SPECIALTY_PHARMACY_NPI is a required field and has a value.
+3,SPECIALTY_PHARMACY_NPI,Y,1386674067.0,Pass,SPECIALTY_PHARMACY_NPI is a required field and has a value.
+4,SPECIALTY_PHARMACY_NPI,Y,1366475022.0,Pass,SPECIALTY_PHARMACY_NPI is a required field and has a value.
+5,SPECIALTY_PHARMACY_NPI,Y,1881639755.0,Pass,SPECIALTY_PHARMACY_NPI is a required field and has a value.
+6,SPECIALTY_PHARMACY_NPI,Y,1003826694.0,Pass,SPECIALTY_PHARMACY_NPI is a required field and has a value.
+7,SPECIALTY_PHARMACY_NPI,Y,1386674067.0,Pass,SPECIALTY_PHARMACY_NPI is a required field and has a value.
+8,SPECIALTY_PHARMACY_NPI,Y,1386674067.0,Pass,SPECIALTY_PHARMACY_NPI is a required field and has a value.
+1,SPECIALTY_PHARMACY_NCPDP,Y,Missing,Fail,SPECIALTY_PHARMACY_NCPDP is a required field and is missing value.
+2,SPECIALTY_PHARMACY_NCPDP,Y,Missing,Fail,SPECIALTY_PHARMACY_NCPDP is a required field and is missing value.
+3,SPECIALTY_PHARMACY_NCPDP,Y,2421662.0,Pass,SPECIALTY_PHARMACY_NCPDP is a required field and has a value.
+4,SPECIALTY_PHARMACY_NCPDP,Y,2630134.0,Pass,SPECIALTY_PHARMACY_NCPDP is a required field and has a value.
+5,SPECIALTY_PHARMACY_NCPDP,Y,2902852.0,Pass,SPECIALTY_PHARMACY_NCPDP is a required field and has a value.
+6,SPECIALTY_PHARMACY_NCPDP,Y,3812080.0,Pass,SPECIALTY_PHARMACY_NCPDP is a required field and has a value.
+7,SPECIALTY_PHARMACY_NCPDP,Y,2421662.0,Pass,SPECIALTY_PHARMACY_NCPDP is a required field and has a value.
+8,SPECIALTY_PHARMACY_NCPDP,Y,2421662.0,Pass,SPECIALTY_PHARMACY_NCPDP is a required field and has a value.
+,SPECIALTY_PHARMACY_NAME,Y,NA,Fail,SPECIALTY_PHARMACY_NAME is a required field but does not exist in the CSV file.
+,SPECIALTY_PHARMACY_CODE,Y,NA,Fail,SPECIALTY_PHARMACY_CODE is a required field but does not exist in the CSV file.
+1,SPECIALTY_PHARMACY_ADDRESS1,Y,6288 HUDSON CROSSING PARKWAY,Pass,SPECIALTY_PHARMACY_ADDRESS1 is a required field and has a value.
+2,SPECIALTY_PHARMACY_ADDRESS1,Y,AMELIA INDUSTRIAL PARK,Pass,SPECIALTY_PHARMACY_ADDRESS1 is a required field and has a value.
+3,SPECIALTY_PHARMACY_ADDRESS1,Y,2345 WATERS DRIVE,Pass,SPECIALTY_PHARMACY_ADDRESS1 is a required field and has a value.
+4,SPECIALTY_PHARMACY_ADDRESS1,Y,8248 LACKLAND RD - SUITE 101,Pass,SPECIALTY_PHARMACY_ADDRESS1 is a required field and has a value.
+5,SPECIALTY_PHARMACY_ADDRESS1,Y,1951 RAMROD AVENUE,Pass,SPECIALTY_PHARMACY_ADDRESS1 is a required field and has a value.
+6,SPECIALTY_PHARMACY_ADDRESS1,Y,7358 S. W. DURHAM ROAD,Pass,SPECIALTY_PHARMACY_ADDRESS1 is a required field and has a value.
+7,SPECIALTY_PHARMACY_ADDRESS1,Y,2345 WATERS DRIVE,Pass,SPECIALTY_PHARMACY_ADDRESS1 is a required field and has a value.
+8,SPECIALTY_PHARMACY_ADDRESS1,Y,2345 WATERS DRIVE,Pass,SPECIALTY_PHARMACY_ADDRESS1 is a required field and has a value.
+1,SPECIALTY_PHARMACY_CITY,Y,HUDSON,Pass,SPECIALTY_PHARMACY_CITY is a required field and has a value.
+2,SPECIALTY_PHARMACY_CITY,Y,GUAYNABO,Pass,SPECIALTY_PHARMACY_CITY is a required field and has a value.
+3,SPECIALTY_PHARMACY_CITY,Y,MENDOTA HEIGHTS,Pass,SPECIALTY_PHARMACY_CITY is a required field and has a value.
+4,SPECIALTY_PHARMACY_CITY,Y,ST. LOUIS,Pass,SPECIALTY_PHARMACY_CITY is a required field and has a value.
+5,SPECIALTY_PHARMACY_CITY,Y,HENDERSON,Pass,SPECIALTY_PHARMACY_CITY is a required field and has a value.
+6,SPECIALTY_PHARMACY_CITY,Y,PORTLAND,Pass,SPECIALTY_PHARMACY_CITY is a required field and has a value.
+7,SPECIALTY_PHARMACY_CITY,Y,MENDOTA HEIGHTS,Pass,SPECIALTY_PHARMACY_CITY is a required field and has a value.
+8,SPECIALTY_PHARMACY_CITY,Y,MENDOTA HEIGHTS,Pass,SPECIALTY_PHARMACY_CITY is a required field and has a value.
+1,SPECIALTY_PHARMACY_STATE,Y,OH,Pass,SPECIALTY_PHARMACY_STATE is a required field and has a value.
+2,SPECIALTY_PHARMACY_STATE,Y,PR,Pass,SPECIALTY_PHARMACY_STATE is a required field and has a value.
+3,SPECIALTY_PHARMACY_STATE,Y,MN,Pass,SPECIALTY_PHARMACY_STATE is a required field and has a value.
+4,SPECIALTY_PHARMACY_STATE,Y,MO,Pass,SPECIALTY_PHARMACY_STATE is a required field and has a value.
+5,SPECIALTY_PHARMACY_STATE,Y,NV,Pass,SPECIALTY_PHARMACY_STATE is a required field and has a value.
+6,SPECIALTY_PHARMACY_STATE,Y,OR,Pass,SPECIALTY_PHARMACY_STATE is a required field and has a value.
+7,SPECIALTY_PHARMACY_STATE,Y,MN,Pass,SPECIALTY_PHARMACY_STATE is a required field and has a value.
+8,SPECIALTY_PHARMACY_STATE,Y,MN,Pass,SPECIALTY_PHARMACY_STATE is a required field and has a value.
+1,SPECIALTY_PHARMACY_ZIP,Y,44236,Pass,SPECIALTY_PHARMACY_ZIP is a required field and has a value.
+2,SPECIALTY_PHARMACY_ZIP,Y,934,Pass,SPECIALTY_PHARMACY_ZIP is a required field and has a value.
+3,SPECIALTY_PHARMACY_ZIP,Y,55120,Pass,SPECIALTY_PHARMACY_ZIP is a required field and has a value.
+4,SPECIALTY_PHARMACY_ZIP,Y,63114,Pass,SPECIALTY_PHARMACY_ZIP is a required field and has a value.
+5,SPECIALTY_PHARMACY_ZIP,Y,89014,Pass,SPECIALTY_PHARMACY_ZIP is a required field and has a value.
+6,SPECIALTY_PHARMACY_ZIP,Y,97224,Pass,SPECIALTY_PHARMACY_ZIP is a required field and has a value.
+7,SPECIALTY_PHARMACY_ZIP,Y,55120,Pass,SPECIALTY_PHARMACY_ZIP is a required field and has a value.
+8,SPECIALTY_PHARMACY_ZIP,Y,55120,Pass,SPECIALTY_PHARMACY_ZIP is a required field and has a value.
+,PRIMARY_PAYER_NAME,Y,NA,Fail,PRIMARY_PAYER_NAME is a required field but does not exist in the CSV file.
+,PRIMARY_PAYER_BIN,Y,NA,Fail,PRIMARY_PAYER_BIN is a required field but does not exist in the CSV file.
+,PRIMARY_PAYER_PCN,Y,NA,Fail,PRIMARY_PAYER_PCN is a required field but does not exist in the CSV file.
+,PRIMARY_PAYER_GROUP_ID,Y,NA,Fail,PRIMARY_PAYER_GROUP_ID is a required field but does not exist in the CSV file.
+,PRIMARY_PAYER_IIN,Y,NA,Fail,PRIMARY_PAYER_IIN is a required field but does not exist in the CSV file.
+,SECONDARY_PAYER_NAME,Y,NA,Fail,SECONDARY_PAYER_NAME is a required field but does not exist in the CSV file.
+,SECONDARY_PAYER_BIN,Y,NA,Fail,SECONDARY_PAYER_BIN is a required field but does not exist in the CSV file.
+,SECONDARY_PAYER_PCN,Y,NA,Fail,SECONDARY_PAYER_PCN is a required field but does not exist in the CSV file.
+,SECONDARY_PAYER_GROUP_ID,Y,NA,Fail,SECONDARY_PAYER_GROUP_ID is a required field but does not exist in the CSV file.
+,SECONDARY_PAYER_IIN,Y,NA,Fail,SECONDARY_PAYER_IIN is a required field but does not exist in the CSV file.

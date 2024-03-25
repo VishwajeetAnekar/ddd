@@ -2,10 +2,14 @@ from behave import when, then
 from main2 import duplicate_keys_validation
 import pandas as pd
 
+
 @when('duplicate keys are validated')
 def step_impl(context):
-    context.validation_result_df, context.validation_result = duplicate_keys_validation(context.data_file)
-    context.validation_result_df.to_csv('Results/duplicate_keys_validation_result.csv', index=False)
+    context.validation_result_df, context.validation_result = duplicate_keys_validation(
+        context.data_file)
+    context.validation_result_df.to_csv(
+        'Results/Done/duplicate_header_validation_result.csv', index=False)
+
 
 @then('no duplicate rows or columns are found')
 def step_impl(context):
@@ -15,5 +19,3 @@ def step_impl(context):
         validation_result = "Error"
 
     assert validation_result == "Success", "Validation failed"
-
-
