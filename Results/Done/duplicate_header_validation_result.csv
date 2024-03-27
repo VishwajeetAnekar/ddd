@@ -1,16 +1,16 @@
 Column Name,Status,Details
 TRANSACTION_DATE,Pass,Unique Column
-SOURCE_CODE,Fail,Duplicate Columns found
-PHARMACY_TRANSACTION_ID,Fail,Duplicate Columns found
-RESTATEMENT_FLAG,Fail,Duplicate Columns found
-TRANSACTION_TYPE,Fail,Duplicate Columns found
-REFERRAL_SOURCE,Pass,Unique Column
-REFERRAL_NUMBER,Pass,Unique Column
-REFERRAL_DATE,Pass,Unique Column
-BRAND,Pass,Unique Column
-NDC,Pass,Unique Column
-MEDICATION,Pass,Unique Column
-PRIMARY_DIAGNOSIS_CODE,Pass,Unique Column
+SOURCE_CODE,Pass,Unique Column
+PHARMACY_TRANSACTION_ID,Pass,Unique Column
+RESTATEMENT_FLAG,Fail,"Duplicate Column found in RESTATEMENT_FLAG, RESTATEMENT_FLAG.1"
+TRANSACTION_TYPE,Fail,"Duplicate Column found in TRANSACTION_TYPE, TRANSACTION_TYPE.1"
+REFERRAL_SOURCE,Fail,"Duplicate Column found in REFERRAL_SOURCE, REFERRAL_SOURCE.1"
+REFERRAL_NUMBER,Fail,"Duplicate Column found in REFERRAL_NUMBER, REFERRAL_NUMBER.1"
+REFERRAL_DATE,Fail,"Duplicate Column found in REFERRAL_DATE, REFERRAL_DATE.1"
+BRAND,Fail,"Duplicate Column found in BRAND, BRAND.1, BRAND.2, brand"
+NDC,Fail,"Duplicate Column found in NDC, NDC.1"
+MEDICATION,Fail,"Duplicate Column found in MEDICATION, MEDICATION.1"
+PRIMARY_DIAGNOSIS_CODE,Fail,"Duplicate Column found in PRIMARY_DIAGNOSIS_CODE, PRIMARY_DIAGNOSIS_CODE.1"
 SECONDARY_DIAGNOSIS_CODE,Pass,Unique Column
 LONGITUDINAL_PATIENT_ID,Pass,Unique Column
 PHARMACY_PATIENT_ID,Pass,Unique Column
@@ -98,5 +98,17 @@ SECONDARY_PATIENT_COINSURANCE,Pass,Unique Column
 OTHER_PAYER_AMOUNT,Pass,Unique Column
 COPAY_ASSISTANCE_AMOUNT,Pass,Unique Column
 RX_NUMBER,Pass,Unique Column
-RX_NUMBER_OF_REFILLS,Pass,Unique Column
+RX_NUMBER_OF_REFILLS,Fail,"Duplicate Column found in RX_NUMBER_OF_REFILLS, RX_NUMBER_OF_REFILLS.1"
 NAME_OF_TRANSFER_SPECIALTY_PHARMACY,Pass,Unique Column
+RESTATEMENT_FLAG.1,Fail,"Duplicate Column found in RESTATEMENT_FLAG, RESTATEMENT_FLAG.1"
+TRANSACTION_TYPE.1,Fail,"Duplicate Column found in TRANSACTION_TYPE, TRANSACTION_TYPE.1"
+REFERRAL_SOURCE.1,Fail,"Duplicate Column found in REFERRAL_SOURCE, REFERRAL_SOURCE.1"
+REFERRAL_NUMBER.1,Fail,"Duplicate Column found in REFERRAL_NUMBER, REFERRAL_NUMBER.1"
+REFERRAL_DATE.1,Fail,"Duplicate Column found in REFERRAL_DATE, REFERRAL_DATE.1"
+BRAND.1,Fail,"Duplicate Column found in BRAND, BRAND.1, BRAND.2, brand"
+RX_NUMBER_OF_REFILLS.1,Fail,"Duplicate Column found in RX_NUMBER_OF_REFILLS, RX_NUMBER_OF_REFILLS.1"
+BRAND.2,Fail,"Duplicate Column found in BRAND, BRAND.1, BRAND.2, brand"
+NDC.1,Fail,"Duplicate Column found in NDC, NDC.1"
+MEDICATION.1,Fail,"Duplicate Column found in MEDICATION, MEDICATION.1"
+PRIMARY_DIAGNOSIS_CODE.1,Fail,"Duplicate Column found in PRIMARY_DIAGNOSIS_CODE, PRIMARY_DIAGNOSIS_CODE.1"
+brand,Fail,"Duplicate Column found in BRAND, BRAND.1, BRAND.2, brand"

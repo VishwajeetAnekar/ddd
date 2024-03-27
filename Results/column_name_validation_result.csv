@@ -100,3 +100,15 @@ COPAY_ASSISTANCE_AMOUNT,COPAY_ASSISTANCE_AMOUNT,Pass,Column names match
 RX_NUMBER,RX_NUMBER,Pass,Column names match
 RX_NUMBER_OF_REFILLS,RX_NUMBER_OF_REFILLS,Pass,Column names match
 NAME_OF_TRANSFER_SPECIALTY_PHARMACY,NAME_OF_TRANSFER_SPECIALTY_PHARMACY,Pass,Column names match
+RESTATEMENT_FLAG.1,RESTATEMENT_FLAG.1,Pass,Column names match
+TRANSACTION_TYPE.1,TRANSACTION_TYPE.1,Pass,Column names match
+REFERRAL_SOURCE.1,REFERRAL_SOURCE.1,Pass,Column names match
+REFERRAL_NUMBER.1,REFERRAL_NUMBER.1,Pass,Column names match
+REFERRAL_DATE.1,REFERRAL_DATE.1,Pass,Column names match
+BRAND.1,BRAND.1,Pass,Column names match
+RX_NUMBER_OF_REFILLS.1,RX_NUMBER_OF_REFILLS.1,Pass,Column names match
+BRAND.2,BRAND.2,Pass,Column names match
+NDC.1,NDC.1,Pass,Column names match
+MEDICATION.1,MEDICATION.1,Pass,Column names match
+PRIMARY_DIAGNOSIS_CODE.1,PRIMARY_DIAGNOSIS_CODE.1,Pass,Column names match
+brand,brand,Pass,Column names match

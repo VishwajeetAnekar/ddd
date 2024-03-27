@@ -1,2 +1,2 @@
 Feature,Rows in CSV 1,Rows in CSV 2,Status,Result
-Row Count Validation,499,499,Pass,Both files have the same number of rows
+Row Count Validation,8,8,Pass,Both files have the same number of rows

@@ -1,51 +1,20 @@
 PHARMACY_TRANSACTION_ID,Column Name,Requirement,Data Type,Value,Status,Details
-1,RESTATEMENT_FLAG,Y,VARCHAR(1),,Fail,Empty value in column
-2,RESTATEMENT_FLAG,Y,VARCHAR(1),,Fail,Empty value in column
-1,TRANSACTION_TYPE,Y,VARCHAR(256),,Fail,Empty value in column
-2,TRANSACTION_TYPE,Y,VARCHAR(256),,Fail,Empty value in column
-1,REFERRAL_SOURCE,Y,VARCHAR(256),,Fail,Empty value in column
-2,REFERRAL_SOURCE,Y,VARCHAR(256),,Fail,Empty value in column
-1,REFERRAL_DATE,Y,DATE(14),,Fail,Empty value in column
-2,REFERRAL_DATE,Y,DATE(14),,Fail,Empty value in column
-4,PRIMARY_DIAGNOSIS_CODE,C,VARCHAR(256),,Fail,Empty value in column
-5,PRIMARY_DIAGNOSIS_CODE,C,VARCHAR(256),,Fail,Empty value in column
-6,PRIMARY_DIAGNOSIS_CODE,C,VARCHAR(256),,Fail,Empty value in column
-7,PRIMARY_DIAGNOSIS_CODE,C,VARCHAR(256),,Fail,Empty value in column
-3,HUB_PATIENT_ID,C,VARCHAR(256),,Fail,Empty value in column
-4,HUB_PATIENT_ID,C,VARCHAR(256),,Fail,Empty value in column
-5,HUB_PATIENT_ID,C,VARCHAR(256),,Fail,Empty value in column
-6,HUB_PATIENT_ID,C,VARCHAR(256),,Fail,Empty value in column
-7,HUB_PATIENT_ID,C,VARCHAR(256),,Fail,Empty value in column
-8,HUB_PATIENT_ID,C,VARCHAR(256),,Fail,Empty value in column
-3,PATIENT_CONSENT_DATE,Y,DATE(8),,Fail,Empty value in column
-4,PATIENT_CONSENT_DATE,Y,DATE(8),,Fail,Empty value in column
-5,PATIENT_CONSENT_DATE,Y,DATE(8),,Fail,Empty value in column
-6,PATIENT_CONSENT_DATE,Y,DATE(8),,Fail,Empty value in column
-7,PATIENT_CONSENT_DATE,Y,DATE(8),,Fail,Empty value in column
-8,PATIENT_CONSENT_DATE,Y,DATE(8),,Fail,Empty value in column
-1,PATIENT_RESPONSIBILITY,Y,DOUBLE,,Fail,Empty value in column
-2,PATIENT_RESPONSIBILITY,Y,DOUBLE,,Fail,Empty value in column
-3,PATIENT_RESPONSIBILITY,Y,DOUBLE,,Fail,Empty value in column
-4,PATIENT_RESPONSIBILITY,Y,DOUBLE,,Fail,Empty value in column
-5,PATIENT_RESPONSIBILITY,Y,DOUBLE,,Fail,Empty value in column
-6,PATIENT_RESPONSIBILITY,Y,DOUBLE,,Fail,Empty value in column
-7,PATIENT_RESPONSIBILITY,Y,DOUBLE,,Fail,Empty value in column
-8,PATIENT_RESPONSIBILITY,Y,DOUBLE,,Fail,Empty value in column
-1,PATIENT_DEDUCTIBLE,Y,DOUBLE,,Fail,Empty value in column
-2,PATIENT_DEDUCTIBLE,Y,DOUBLE,,Fail,Empty value in column
-3,PATIENT_DEDUCTIBLE,Y,DOUBLE,,Fail,Empty value in column
-4,PATIENT_DEDUCTIBLE,Y,DOUBLE,,Fail,Empty value in column
-5,PATIENT_DEDUCTIBLE,Y,DOUBLE,,Fail,Empty value in column
-6,PATIENT_DEDUCTIBLE,Y,DOUBLE,,Fail,Empty value in column
-7,PATIENT_DEDUCTIBLE,Y,DOUBLE,,Fail,Empty value in column
-8,PATIENT_DEDUCTIBLE,Y,DOUBLE,,Fail,Empty value in column
-1,PATIENT_COPAY,Y,DOUBLE,,Fail,Empty value in column
-2,PATIENT_COPAY,Y,DOUBLE,,Fail,Empty value in column
-3,PATIENT_COPAY,Y,DOUBLE,,Fail,Empty value in column
-4,PATIENT_COPAY,Y,DOUBLE,,Fail,Empty value in column
-5,PATIENT_COPAY,Y,DOUBLE,,Fail,Empty value in column
-6,PATIENT_COPAY,Y,DOUBLE,,Fail,Empty value in column
-7,PATIENT_COPAY,Y,DOUBLE,,Fail,Empty value in column
-8,PATIENT_COPAY,Y,DOUBLE,,Fail,Empty value in column
-,PRESCRIBER_REMS_ID,Y,VARCHAR(256),,Fail,Column 'PRESCRIBER_REMS_ID' not found in the CSV file
-,REMS_AUTHORIZATION_CODE,Y,VARCHAR(256),,Fail,Column 'REMS_AUTHORIZATION_CODE' not found in the CSV file
+5,TRANSACTION_DATE,,DATE(14),20220321 00:00:0011,Fail,Invalid date format
+5,RESTATEMENT_FLAG,,VARCHAR(1),N0,Fail,Exceeded length limit
+6,RESTATEMENT_FLAG,,VARCHAR(1),No,Fail,Exceeded length limit
+4,REFERRAL_DATE,,DATE(14),20218210 00:00:00,Fail,Invalid date format
+2,PATIENT_CONSENT_DATE,,DATE(8),20230148,Fail,Invalid date format
+,SPECIALTY_PHARMACY_NAME,,VARCHAR(256),,Fail,Column 'SPECIALTY_PHARMACY_NAME' not found in the CSV file
+,SPECIALTY_PHARMACY_CODE,,VARCHAR(256),,Fail,Column 'SPECIALTY_PHARMACY_CODE' not found in the CSV file
+,PRIMARY_PAYER_NAME,,VARCHAR(256),,Fail,Column 'PRIMARY_PAYER_NAME' not found in the CSV file
+,PRIMARY_PAYER_BIN,,VARCHAR(256),,Fail,Column 'PRIMARY_PAYER_BIN' not found in the CSV file
+,PRIMARY_PAYER_PCN,,VARCHAR(256),,Fail,Column 'PRIMARY_PAYER_PCN' not found in the CSV file
+,PRIMARY_PAYER_GROUP_ID,,VARCHAR(256),,Fail,Column 'PRIMARY_PAYER_GROUP_ID' not found in the CSV file
+,PRIMARY_PAYER_IIN,,VARCHAR(256),,Fail,Column 'PRIMARY_PAYER_IIN' not found in the CSV file
+,SECONDARY_PAYER_NAME,,VARCHAR(256),,Fail,Column 'SECONDARY_PAYER_NAME' not found in the CSV file
+,SECONDARY_PAYER_BIN,,VARCHAR(256),,Fail,Column 'SECONDARY_PAYER_BIN' not found in the CSV file
+,SECONDARY_PAYER_PCN,,VARCHAR(256),,Fail,Column 'SECONDARY_PAYER_PCN' not found in the CSV file
+,SECONDARY_PAYER_GROUP_ID,,VARCHAR(256),,Fail,Column 'SECONDARY_PAYER_GROUP_ID' not found in the CSV file
+,SECONDARY_PAYER_IIN,,VARCHAR(256),,Fail,Column 'SECONDARY_PAYER_IIN' not found in the CSV file
+2,PATIENT_RESPONSIBILITY,,DOUBLE,af,Fail,Invalid double format
+6,PATIENT_RESPONSIBILITY,,DOUBLE,2.3.2,Fail,Invalid double format

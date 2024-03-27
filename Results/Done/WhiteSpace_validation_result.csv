@@ -1,4 +1,1 @@
 PHARMACY_TRANSACTION_ID,Column Name,Value,Status,Details
-1,SOURCE_CODE,ALEXION  HUB,Fail,Whitespace found
-,PRESCRIBER_REMS_ID,NA,Fail,PRESCRIBER_REMS_ID is a required field but does not exist in the CSV file.
-,REMS_AUTHORIZATION_CODE,NA,Fail,REMS_AUTHORIZATION_CODE is a required field but does not exist in the CSV file.

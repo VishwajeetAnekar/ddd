@@ -1,11 +1,11 @@
 Field ID,Field Name,Description,Data Type,Field Format,Requirement,Requirement Conditional Expression,Expected Value Conditional Expression,Expected Value/s (comma separated)
-1,TRANSACTION_DATE,Date and time the Pharmacy Transaction ID was generated in the SP's system in YYYYMMDDHHMMSS,DATETIME(14),YYYYMMDDHHMMSS,Y,,,
+1,TRANSACTION_DATE,Date and time the Pharmacy Transaction ID was generated in the SP's system in YYYYMMDDHHMMSS,DATE(14),YYYYMMDDHHMMSS,Y,,,
 2,PHARMACY_TRANSACTION_ID,Value that can uniquely identify the transaction in the SP or system.,VARCHAR(256),,Y,,,
 3,RESTATEMENT_FLAG,Flag to indicate if the transaction has been re-stated,VARCHAR(1),,Y,,,"Y, N"
 4,TRANSACTION_TYPE,Code set indicating activity category for transaction within SP system.,VARCHAR(256),,Y,,,"COM, PAP, QUICK, BRIDGE, FREE TRIAL"
 5,REFERRAL_NUMBER,Patient engagement ID in the current patient journey assigned by the Specialty Pharmacy.,VARCHAR(256),,Y,,,
 6,REFERRAL_SOURCE,Source of where the patient was referred to SP,VARCHAR(256),,Y,,,"DIRECT, HUB, PHARM"
-7,REFERRAL_DATE,Date and time the patient referral was received at SP and entered into system in YYYYMMDDHHMMSS,DATETIME(14),YYYYMMDDHHMMSS,Y,,,
+7,REFERRAL_DATE,Date and time the patient referral was received at SP and entered into system in YYYYMMDDHHMMSS,DATE(14),YYYYMMDDHHMMSS,Y,,,
 8,BRAND,Product brand represented by NDC,VARCHAR(100),,Y,,,
 9,NDC,NDC-11 Number on original RX,VARCHAR(100),No dashes,N,,,
 10,MEDICATION,"Product name represented by NDC (Product name, form and strength)",VARCHAR(100),,C,"`CUSTOMER_STATUS` in (""ACTIVE"")",,
@@ -23,7 +23,7 @@ Field ID,Field Name,Description,Data Type,Field Format,Requirement,Requirement C
 22,CUSTOMER_STATUS,Status provided by SP,VARCHAR(256),,Y,,,"ACTIVE,PENDING,CANCELLED, DISCONTINUED"
 23,CUSTOMER_SUBSTATUS,Sub Status code provided by SP,VARCHAR(256),,Y,,,
 24,CUSTOMER_SUBSTATUS_DESCRIPTION,Description of Customer Sub Status provided by SP,VARCHAR(256),,Y,,,
-25,STATUS_DATE,Date and time that patient was assigned status / substatus combination in YYYYMMDDHHMMSS,DATETIME(14),YYYYMMDDHHMMSS,Y,,,
+25,STATUS_DATE,Date and time that patient was assigned status / substatus combination in YYYYMMDDHHMMSS,DATE(14),YYYYMMDDHHMMSS,Y,,,
 26,PRIOR_AUTH_REQUIRED,Flag if Prior Authorization Required,VARCHAR(1),,N,,,"Y, N"
 27,PRIOR_AUTH_START_DATE,Start Date for Prior Authorization,DATE(8),YYYYMMDD,N,,,
 28,PRIOR_AUTH_EXPIRATION_DATE,Expiration Date for Prior Authorization,DATE(8),YYYYMMDD,N,,,

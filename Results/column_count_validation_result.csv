@@ -1,2 +1,2 @@
 Feature,Columns in CSV 1,Columns in CSV 2,Status,Result
-Column Count Validation,101,101,Pass,Both files have the same number of columns
+Column Count Validation,113,113,Pass,Both files have the same number of columns
